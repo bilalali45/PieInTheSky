@@ -1,0 +1,123 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:theme">@style/ThemeOverlay.CustomFont</item>
+        <item name="android:fontFamily">?fontFamilyRegular</item>
+    </style>
+
+    <style name="ThemeOverlay.CustomFont" parent="">
+        <item name="fontFamilyBold">@font/okra_bold</item>
+        <item name="fontFamilyExtraBold">@font/okra_extrabold</item>
+        <item name="fontFamilyExtraLight">@font/okra_extralight</item>
+        <item name="fontFamilyLight">@font/okra_light</item>
+        <item name="fontFamilyMedium">@font/okra_medium</item>
+        <item name="fontFamilyRegular">@font/okra_regular</item>
+        <item name="fontFamilySemiBold">@font/okra_semibold</item>
+        <item name="fontFamilyThin">@font/okra_thin</item>
+    </style>
+
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.SplashTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@drawable/splash</item>
+        <item name="colorPrimaryDark">@android:color/transparent</item>
+    </style>
+
+    <style name="AppTheme.SplashVideoTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimaryDark">@android:color/transparent</item>
+    </style>
+
+    <style name="AppTheme.DashboardTheme">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@android:color/transparent</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="ProfileTab" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="FullViewDialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+    </style>
+
+    <style name="FilterTabTextView">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">#1c1c1c</item>
+    </style>
+
+    <style name="FilterTabSubTextView">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="FilterRadio">
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:paddingBottom">15dp</item>
+    </style>
+
+    <style name="ProfileTextView">
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">#5d5d67</item>
+    </style>
+
+    <style name="ProfileEditText">
+        <item name="android:textSize">16.0sp</item>
+    </style>
+
+    <style name="TagTextView">
+        <item name="android:background">@drawable/view_round</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:textColor">@color/colorGreen</item>
+    </style>
+
+    <style name="InfoTextView">
+        <item name="android:drawableLeft">@drawable/p_check</item>
+        <item name="android:drawablePadding">5dp</item>
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">#797979</item>
+    </style>
+
+    <style name="TabLayout_Theme" parent="@style/AppTheme">
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="CustomBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomBottomSheetStyle</item>
+    </style>
+
+    <style name="CustomBottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="CategoryTab" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+</resources>

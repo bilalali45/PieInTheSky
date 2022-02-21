@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".ProfileFragment">
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/main_window"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer_UserLoading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:shimmer_duration="800">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@color/placeholder_bg" />
+
+
+                <View
+                    android:layout_width="270dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:background="@color/placeholder_bg" />
+
+                <View
+                    android:layout_width="200dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/placeholder_bg" />
+
+
+                <View
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/placeholder_bg" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="90dp"
+                        android:layout_height="10dp"
+                        android:background="@color/placeholder_bg" />
+
+                    <View
+                        android:layout_width="90dp"
+                        android:layout_height="10dp"
+                        android:layout_marginLeft="130dp"
+                        android:background="@color/placeholder_bg" />
+
+                    <View
+                        android:layout_width="90dp"
+                        android:layout_height="10dp"
+                        android:layout_marginLeft="260dp"
+                        android:background="@color/placeholder_bg" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <LinearLayout
+                android:id="@+id/lyMainWindow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/ivCoverPhoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/cover_photo" />
+
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/btnEditProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/ivCoverPhoto"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="10dp"
+                    android:alpha="0.8"
+                    android:orientation="horizontal"
+                    app:cardBackgroundColor="#525458"
+                    app:cardCornerRadius="4dp">
+
+
+                    <pk.com.pieinthesky.app.widget.IconButton
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:button_text=" Edit Profile"
+                        app:button_textSize="15sp"
+                        app:button_textColor="@color/colorWhite"
+                        app:button_iconName="@string/fa_edit"></pk.com.pieinthesky.app.widget.IconButton>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="160dp"
+                    android:orientation="horizontal"
+                    app:cardCornerRadius="40dp">
+
+                    <pk.com.pieinthesky.app.widget.CircleImageView
+                        android:id="@+id/ivUserPhoto"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_margin="2dp"
+                        android:src="@drawable/empty_pic" />
+                </android.support.v7.widget.CardView>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvUserFullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="User Full Name"
+                android:textColor="#383838"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <pk.com.pieinthesky.app.widget.IconTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingRight="4dp"
+                    android:text="@string/fa_map_marker_alt_solid"
+                    android:textColor="#828282"
+                    android:textSize="14sp"
+                    app:solid_icon="true" />
+
+                <TextView
+                    android:id="@+id/tvPlaceLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Karachi, Pakistan"
+                    android:textColor="#828282"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvUserDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:text="Food lover"
+                android:textColor="#4f4f4f"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvFollowers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="102 followers"
+                    android:textColor="#4f4f4f"
+                    android:textSize="15sp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" . "
+                    android:textColor="#4f4f4f"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tvFollowing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3 following"
+                    android:textColor="#4f4f4f"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/button_bg_gray_corner"
+                    android:text="Add Review"
+                    android:textColor="#383838"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/button_bg_gray_corner"
+                    android:text="Add photo"
+                    android:textColor="#383838"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_bg_gray_corner"
+                    android:onClick="btnEditProfile_onClick"
+                    android:text="Edit profile"
+                    android:textColor="#383838"></TextView>
+
+
+            </LinearLayout>
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/colorWhite"
+                app:tabIndicatorColor="#ed5a6b"
+                app:tabSelectedTextColor="#ed5a6b"
+                app:tabTextAppearance="@style/ProfileTab"
+                app:tabTextColor="#b5b5b5" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#d0d0d0" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tabTimeline"
+                android:orientation="vertical">
+
+
+
+                <pk.com.pieinthesky.app.widget.NonScrollListView
+                    android:id="@+id/list_Timeline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="#f8f8f8"
+                    android:dividerHeight="8dp">
+
+                </pk.com.pieinthesky.app.widget.NonScrollListView>
+
+                <LinearLayout
+                    android:id="@+id/lyLoadTimeline"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="5dp" >
+
+                    <ProgressBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="?android:attr/progressBarStyleSmall" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="Loading..."
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+        </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tabReviews"
+                    android:orientation="vertical">
+
+
+
+                    <pk.com.pieinthesky.app.widget.NonScrollListView
+                        android:id="@+id/list_Review"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:divider="#f8f8f8"
+                        android:dividerHeight="8dp">
+
+                    </pk.com.pieinthesky.app.widget.NonScrollListView>
+
+                    <LinearLayout
+                        android:id="@+id/lyLoadReviews"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="5dp" >
+
+                        <ProgressBar
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="?android:attr/progressBarStyleSmall" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="Loading..."
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tabPhotos"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="Photo" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:onClick="btnPlaceDetail_onClick">
+
+                        <ImageView
+
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginRight="5dp"
+                            android:src="@drawable/res_image" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvFullName4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Steak by CFU"
+                                android:textColor="#383838"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvSubDetail4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Icecreame, bbq, Cafe"
+                                android:textColor="#b5b5b5"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal">
+
+
+
+
+                    <TextView
+                        android:id="@+id/tvReviewDate4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="10dp"
+                        android:text="8 days ago"
+                        android:textColor="#b5b5b5"
+                        android:textSize="11sp" />
+                </RelativeLayout>
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:src="@drawable/demo_pic"
+                    android:layout_marginRight="20dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvReviewLike4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="0 Likes, 0 Comments"
+                    android:textColor="#9c9c9c"
+                    android:textSize="12sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp">
+
+                    <pk.com.pieinthesky.app.widget.IconButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:button_iconName="@string/fa_thumbs_up_solid"
+                        app:button_text="Like"
+                        app:button_textColor="#9c9c9c"
+                        app:button_textSize="15sp">
+
+                    </pk.com.pieinthesky.app.widget.IconButton>
+
+                    <pk.com.pieinthesky.app.widget.IconButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        app:button_iconName="@string/fa_comment_dots"
+                        app:button_text="Comment"
+                        app:button_textColor="#9c9c9c"
+                        app:button_textSize="15sp">
+
+                    </pk.com.pieinthesky.app.widget.IconButton>
+                </RelativeLayout>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</FrameLayout>

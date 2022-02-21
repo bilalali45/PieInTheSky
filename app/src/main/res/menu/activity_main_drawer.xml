@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/home"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/profile"
+        android:title="Profile" />
+
+    <item
+        android:id="@+id/nav_my_rewards"
+        android:icon="@drawable/my_rewards"
+        android:title="My Rewards"
+        android:visible="false" />
+
+    <item
+        android:id="@+id/nav_my_addresses"
+        android:icon="@drawable/my_addresses"
+        android:title="My Addresses" />
+
+    <item
+        android:id="@+id/nav_my_order"
+        android:icon="@drawable/my_orders"
+        android:title="My Orders" />
+
+    <item
+        android:id="@+id/nav_my_queues"
+        android:icon="@drawable/my_queues"
+        android:title="My Queues"
+        android:visible="false" />
+
+    <item
+        android:id="@+id/nav_wishlists"
+        android:icon="@drawable/wishlists"
+        android:title="Bookmarks"
+        android:visible="false" />
+
+    <item
+        android:id="@+id/nav_notifications"
+        android:icon="@drawable/notifications"
+        android:title="Notifications"
+        android:visible="false" />
+
+
+    <item
+        android:id="@+id/navigation_reservation"
+        android:icon="@drawable/my_reservation"
+        android:title="Reservation"
+        android:visible="false" />
+
+    <item
+        android:id="@+id/nav_share"
+        android:icon="@drawable/share"
+        android:title="Share" />
+
+    <item
+        android:id="@+id/nav_help_support"
+        android:icon="@drawable/help_support"
+        android:title="Help &amp; Support" />
+
+    <item
+        android:id="@+id/nav_logout"
+        android:icon="@drawable/logout"
+        android:title="Log Out" />
+
+</menu>

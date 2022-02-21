@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="pk.com.pieinthesky.app">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".RewardActivity" />
+        <activity
+            android:name=".CartCustomizeActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".NoConnectionActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".AddQueueActivity" />
+        <activity android:name=".AddressListActivity" />
+        <activity android:name=".OrderDetailActivity" />
+        <activity android:name=".OrderListActivity" />
+        <activity android:name=".CartActivity" />
+        <activity android:name=".BarcodeScannerActivity" />
+        <activity android:name=".PlaceQueueActivity" />
+        <activity android:name=".TableBookingDetailActivity" />
+        <activity android:name=".TableBookingActivity" />
+        <activity
+            android:name=".CollectionDetailActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".CollectionListActivity" />
+        <activity android:name=".SearchActivity" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name=".GoogleLocationActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ImageViewerActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".LocationActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ReviewListActivity" />
+        <activity android:name=".FollowFollowingActivity" />
+        <activity android:name=".UserTimelineActivity" />
+        <activity android:name=".CommentActivity" />
+        <activity android:name=".ReviewActivity" />
+        <activity android:name=".HelpSupportActivity" />
+        <activity android:name=".NotificationActivity" />
+        <activity android:name=".ProfileActivity" />
+        <activity
+            android:name=".PlaceDetailActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".BookmarkActivity" />
+        <activity android:name=".VerifyOTPActivity" />
+        <activity android:name=".SendOTPActivity" />
+        <activity android:name=".ForgotPasswordActivity" />
+        <activity android:name=".SignUpActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity
+            android:name=".LoginSelectionActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".AppIntroActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="pk.com.pieinthesky.app.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <service android:name=".FirebaseIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/fcm_default_notification_channel_id" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/tvTittle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rating" />
+
+
+    <TextView
+        android:id="@+id/tvSelection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="?fontFamilyMedium"
+        android:text="Any +"
+        android:textColor="@color/colorBlack"
+        android:textSize="18sp" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+
+        <TextView
+            android:id="@+id/tvMaxText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:text="Maximum"
+            android:textColor="@color/colorBlack"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:paddingLeft="30dp">
+
+
+            <com.jaygoo.widget.VerticalRangeSeekBar
+                android:id="@+id/sbSingle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:rsb_mode="single"
+                app:rsb_progress_color="@color/colorSeek"
+                app:rsb_thumb_drawable="@drawable/seek_thumb_default"
+                app:rsb_tick_mark_mode="number" />
+
+            <com.jaygoo.widget.VerticalRangeSeekBar
+                android:id="@+id/sbRange"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:rsb_mode="range"
+                app:rsb_progress_color="@color/colorSeek"
+                app:rsb_thumb_drawable="@drawable/seek_thumb_default"
+                app:rsb_tick_mark_mode="number" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvMinText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="5dp"
+            android:text="Minimum"
+            android:textColor="@color/colorBlack"
+            android:textSize="12sp"/>
+    </RelativeLayout>
+
+</LinearLayout>

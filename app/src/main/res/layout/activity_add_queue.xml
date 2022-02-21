@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddQueueActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btnAddQueue">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <pk.com.pieinthesky.app.widget.RoundCornerImageView
+                    android:id="@+id/ivPlaceImage"
+                    android:layout_width="130dp"
+                    android:layout_height="120dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/res_image"
+                    app:image_radius="25dp" />
+
+                <TextView
+                    android:id="@+id/tvPlaceName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="?fontFamilyMedium"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="Title"
+                    android:textColor="#383838"
+                    android:textSize="22sp" />
+
+
+                <TextView
+                    android:id="@+id/tvTags"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:drawablePadding="4dp"
+                    android:fontFamily="?fontFamilyMedium"
+                    android:gravity="center"
+                    android:text="Tags"
+                    android:textColor="#828282"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvPlaceLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:drawablePadding="4dp"
+                    android:fontFamily="?fontFamilyMedium"
+                    android:gravity="center"
+                    android:text="Location"
+                    android:textColor="#828282"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f0f0f0" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="?fontFamilyMedium"
+                    android:text="Your Details"
+                    android:textColor="#383838"
+                    android:textSize="20sp" />
+
+                <TextView
+                    style="@style/ProfileTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Full Name" />
+
+                <EditText
+                    android:id="@+id/etFullName"
+                    style="@style/ProfileEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#ecf0f4"
+                    android:singleLine="true" />
+
+                <TextView
+                    style="@style/ProfileTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mobile No." />
+
+                <EditText
+                    android:id="@+id/etMobileNo"
+                    style="@style/ProfileEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#ecf0f4"
+                    android:inputType="phone"
+                    android:singleLine="true" />
+
+                <TextView
+                    style="@style/ProfileTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No. of Persons" />
+
+                <EditText
+                    android:id="@+id/etNoOfPersons"
+                    style="@style/ProfileEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#ecf0f4"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:text="2" />
+
+                <TextView
+                    style="@style/ProfileTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Special Instruction" />
+
+                <EditText
+                    android:id="@+id/etSpecialInstruction"
+                    style="@style/ProfileEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#ecf0f4"
+                    android:hint=""
+                    android:maxLength="100" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnAddQueue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:text="Add in Queue"
+        android:textColor="@color/colorWhite" />
+
+
+</RelativeLayout>

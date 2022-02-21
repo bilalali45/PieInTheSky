@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    tools:context=".FollowFollowingActivity">
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_UserLoading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:shimmer_duration="800">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="270dp"
+                    android:layout_height="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/placeholder_bg" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="180dp"
+                        android:layout_height="10dp"
+                        android:background="@color/placeholder_bg" />
+
+                    <View
+                        android:layout_width="90dp"
+                        android:layout_height="10dp"
+                        android:layout_alignParentRight="true"
+                        android:background="@color/placeholder_bg" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="180dp"
+                        android:layout_height="10dp"
+                        android:background="@color/placeholder_bg" />
+
+                    <View
+                        android:layout_width="90dp"
+                        android:layout_height="10dp"
+                        android:layout_alignParentRight="true"
+                        android:background="@color/placeholder_bg" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="180dp"
+                        android:layout_height="10dp"
+                        android:background="@color/placeholder_bg" />
+
+                    <View
+                        android:layout_width="90dp"
+                        android:layout_height="10dp"
+                        android:layout_alignParentRight="true"
+                        android:background="@color/placeholder_bg" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+    <LinearLayout
+        android:id="@+id/lyMainWindow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvUserFullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="User Full Name"
+            android:textColor="#383838"
+            android:textSize="25sp" />
+
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/colorWhite"
+            app:tabIndicatorColor="#ed5a6b"
+            app:tabSelectedTextColor="#ed5a6b"
+            app:tabTextAppearance="@style/ProfileTab"
+            app:tabTextColor="#b5b5b5" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#d0d0d0" />
+
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal"
+            app:cardBackgroundColor="@color/colorGreen"
+            app:cardCornerRadius="4dp">
+
+
+            <TextView
+                android:id="@+id/tvAvgRating"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="4.29"
+                android:textColor="@color/colorWhite"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:id="@+id/tvTotalReviews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="500 reviews"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv5Star"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="5dp"
+                android:text="5 star" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/tv5StarPercent"
+                android:layout_toRightOf="@+id/tv5Star"
+                android:background="@color/colorStarBar"
+                android:weightSum="100">
+
+                <View
+                    android:id="@+id/bar5Star"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:layout_weight="38"
+                    android:background="@color/color5Star" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv5StarPercent"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:paddingLeft="5dp"
+                android:text="38%" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv4Star"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="5dp"
+                android:text="4 star" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/tv4StarPercent"
+                android:layout_toRightOf="@+id/tv4Star"
+                android:background="@color/colorStarBar"
+                android:weightSum="100">
+
+                <View
+                    android:id="@+id/bar4Star"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:layout_weight="41"
+                    android:background="@color/color4Star" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv4StarPercent"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:paddingLeft="5dp"
+                android:text="41%" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv3Star"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="5dp"
+                android:text="3 star" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/tv3StarPercent"
+                android:layout_toRightOf="@+id/tv3Star"
+                android:background="@color/colorStarBar"
+                android:weightSum="100">
+
+                <View
+                    android:id="@+id/bar3Star"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:layout_weight="21"
+                    android:background="@color/color3Star" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv3StarPercent"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:paddingLeft="5dp"
+                android:text="21%" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv2Star"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="5dp"
+                android:text="2 star" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/tv2StarPercent"
+                android:layout_toRightOf="@+id/tv2Star"
+                android:background="@color/colorStarBar"
+                android:weightSum="100">
+
+                <View
+                    android:id="@+id/bar2Star"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:layout_weight="5"
+                    android:background="@color/color2Star" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv2StarPercent"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:paddingLeft="5dp"
+                android:text="5%" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv1Star"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="5dp"
+                android:text="1 star" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/tv1StarPercent"
+                android:layout_toRightOf="@+id/tv1Star"
+                android:background="@color/colorStarBar"
+                android:weightSum="100">
+
+                <View
+                    android:id="@+id/bar1Star"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:layout_weight="2"
+                    android:background="@color/color1Star" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv1StarPercent"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:paddingLeft="5dp"
+                android:text="3%" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+

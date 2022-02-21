@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp">
+
+    <TextView
+        android:id="@+id/tvCategoryName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="Review" />
+
+
+    <LinearLayout
+        android:id="@+id/lyPlaceRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <pk.com.pieinthesky.app.widget.RoundCornerImageView
+            android:id="@+id/ivPlaceImage"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="fitXY"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/res_image"
+            app:image_radius="12dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvPlaceName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="?fontFamilyMedium"
+                android:text="Steak by CFU"
+                android:textColor="#383838"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvPlaceSubTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Icecreame, bbq, Cafe"
+                android:textColor="#b5b5b5"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatRatingBar
+            android:id="@+id/rbPlaceRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:isIndicator="true"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:progressDrawable="@drawable/rating_bar_bg"
+            android:transformPivotX="0dp"
+            android:transformPivotY="20dp"
+            android:scaleX="0.5"
+            android:scaleY="0.5"  />
+
+
+        <TextView
+            android:id="@+id/tvReviewDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:text="8 days ago"
+            android:textColor="#b5b5b5"
+            android:textSize="11sp" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tvReviewText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="5dp"
+        android:text="is dummy text used in laying out print, graphic or web design and other text dsfsd dsfdsfds"
+        android:textColor="#4f4f4f"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tvReviewLikeComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="0 Likes, 0 Comments"
+        android:textColor="#9c9c9c"
+        android:textSize="12sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+
+        <pk.com.pieinthesky.app.widget.IconButton
+            android:id="@+id/btnLike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?android:selectableItemBackground"
+            app:button_iconName="@string/fa_thumbs_up_solid"
+            app:button_text="Like"
+            app:button_textColor="@color/colorNotLike"
+            app:button_textSize="15sp">
+
+        </pk.com.pieinthesky.app.widget.IconButton>
+
+        <pk.com.pieinthesky.app.widget.IconButton
+            android:id="@+id/btnComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="?android:selectableItemBackground"
+            app:button_iconName="@string/fa_comment_dots"
+            app:button_text="Comment"
+            app:button_textColor="#9c9c9c"
+            app:button_textSize="15sp">
+
+        </pk.com.pieinthesky.app.widget.IconButton>
+    </RelativeLayout>
+</LinearLayout>

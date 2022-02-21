@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:id="@+id/lyUserRow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <pk.com.pieinthesky.app.widget.CircleImageView
+            android:id="@+id/ivUserPhoto"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/review_user" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvFullName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="User Full Name"
+                android:textColor="#383838"
+                android:textSize="16sp"
+                android:fontFamily="?fontFamilyMedium" />
+
+            <TextView
+                android:id="@+id/tvSubDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="181 reviews, 2591 followers"
+                android:textColor="#b5b5b5"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btnFollow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/button_user_follow"
+        android:text="follow"
+        android:textColor="@color/colorFollow"
+        android:textSize="12sp"></TextView>
+
+
+</RelativeLayout>

@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".ActiveQueueFragment">
+
+    <LinearLayout
+        android:id="@+id/lyLoading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@color/colorWhite"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/progressBarStyleSmall" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/containerAddQueue"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/queue"></ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="?fontFamilyMedium"
+                android:gravity="center"
+                android:text="No active queue yet"
+                android:textColor="#383838"
+                android:textSize="16sp"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="?fontFamilyLight"
+                android:gravity="center"
+                android:text="you don't have any active queue yet. Scan QR Code to add in queue."
+                android:textSize="15sp"></TextView>
+
+            <Button
+                android:id="@+id/btnScanQR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:background="@drawable/button_bg_red_round"
+                android:text="Scan QR Code"
+                android:textColor="@color/colorWhite" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/containerQueueDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="?fontFamilyMedium"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="Token No"
+                        android:textColor="#383838"
+                        android:textSize="22sp" />
+
+                    <TextView
+                        android:id="@+id/tvTokenNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="?fontFamilyMedium"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="23"
+                        android:textColor="#383838"
+                        android:textSize="40sp" />
+
+
+                    <TextView
+                        android:id="@+id/tvEstimatedTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="?fontFamilyMedium"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="Estimated time : 35 min"
+                        android:textColor="#383838"
+                        android:textSize="22sp" />
+
+
+                    <Button
+                        android:id="@+id/btnChange"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="15dp"
+                        android:background="@null"
+                        android:minHeight="0dp"
+                        android:text="Change"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16sp" />
+
+                    <pk.com.pieinthesky.app.widget.RoundCornerImageView
+                        android:id="@+id/ivPlaceImage"
+                        android:layout_width="130dp"
+                        android:layout_height="120dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/res_image"
+                        app:image_radius="25dp" />
+
+                    <TextView
+                        android:id="@+id/tvPlaceName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="?fontFamilyMedium"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="Title"
+                        android:textColor="#383838"
+                        android:textSize="22sp" />
+
+
+                    <TextView
+                        android:id="@+id/tvTags"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:drawablePadding="4dp"
+                        android:fontFamily="?fontFamilyMedium"
+                        android:gravity="center"
+                        android:text="Tags"
+                        android:textColor="#828282"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvPlaceLocation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:drawablePadding="4dp"
+                        android:fontFamily="?fontFamilyMedium"
+                        android:gravity="center"
+                        android:text="Location"
+                        android:textColor="#828282"
+                        android:textSize="14sp" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="#f0f0f0" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="?fontFamilyMedium"
+                    android:paddingLeft="10dp"
+                    android:text="Menu"
+                    android:textColor="#383838"
+                    android:textSize="18sp" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fillViewport="true"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:id="@+id/lyMenu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/no_image" />
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/no_image" />
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/no_image" />
+
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/no_image" />
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="#f0f0f0" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+
+</FrameLayout>

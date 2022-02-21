@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4bb7e8</color>
+    <color name="colorPrimaryDark">#39a6d8</color>
+    <color name="colorAccent">#4ab2e2</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#333333</color>
+    <color name="colorGray">#69708b</color>
+    <color name="colorGreen">#3f9d2f</color>
+	<color name="colorRed">#F44336</color>
+    <color name="colorControl">#dbdbdb</color>
+    <color name="placeholder_bg">#dddddd</color>
+
+    <color name="rippleeffect">#ffbebebe</color>
+
+    <color name="colorNotLike">#9c9c9c</color>
+    <color name="colorLike">#4ab2e2</color>
+
+    <color name="colorBookmark">#f93324</color>
+    <color name="colorNotBookmark">#696969</color>
+
+    <color name="colorSeek">#ed5a6b</color>
+
+    <color name="colorFollow">#ed5a6b</color>
+
+    <color name="colorStarBar">#ededed</color>
+    <color name="color5Star">#008a00</color>
+    <color name="color4Star">#339933</color>
+    <color name="color3Star">#8fae2d</color>
+    <color name="color2Star">#f28500</color>
+    <color name="color1Star">#ab0800</color>
+    <color name="colorTransparent">#00000000</color>
+
+    <color name="colorProgress">#ffffbb33</color>
+    <color name="colorProgressDefault">#FFD7D7D7</color>
+    <color name="colorLightBlue">#11919A</color>
+
+
+    
+</resources>
+

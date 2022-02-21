@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    tools:context=".RewardActivity">
+
+    <ScrollView
+        android:id="@+id/main_window"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:cardCornerRadius="10dp"
+                    app:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.3"
+                            android:background="#fdfcf5"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingLeft="5dp"
+                            android:paddingTop="15dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="15dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <android.support.v7.widget.CardView
+                                    android:layout_width="62dp"
+                                    android:layout_height="62dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:elevation="12dp"
+                                    app:cardCornerRadius="31dp">
+
+                                    <pk.com.pieinthesky.app.widget.CircleImageView
+                                        android:id="@+id/ivUserPhoto"
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/empty_pic" />
+                                </android.support.v7.widget.CardView>
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/tvUserFullName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="?fontFamilyMedium"
+                                android:gravity="center"
+                                android:text="User Full Name"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="140dp"
+                            android:layout_weight="0.7"
+                            android:background="@drawable/bg_red"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tvPoints"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="?fontFamilySemiBold"
+                                    android:text="267"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="32dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="?fontFamilyMedium"
+                                    android:text="  Points"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="16dp" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/tvPointDetail"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="15 points expiring on 31 Dec 2020"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="14dp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="#f8f8f8" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="?fontFamilySemiBold"
+                android:padding="15dp"
+                android:text="You gain points for the following activities"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp" />
+
+            <pk.com.pieinthesky.app.widget.NonScrollListView
+                android:id="@+id/list_PointDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></pk.com.pieinthesky.app.widget.NonScrollListView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

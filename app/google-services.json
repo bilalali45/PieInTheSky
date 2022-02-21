@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "817988241831",
+    "project_id": "pieinthesky-00",
+    "storage_bucket": "pieinthesky-00.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:817988241831:android:3620975e52dce07ab64e82",
+        "android_client_info": {
+          "package_name": "pk.com.pieinthesky.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "817988241831-sju24jhbg96tqjb8s0l571s5lqrom6co.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "pk.com.pieinthesky.app",
+            "certificate_hash": "2a249ff3080ddc773189695b4589d78071e8d78a"
+          }
+        },
+        {
+          "client_id": "817988241831-pa79qt3egrl21advhg1bpkl9vmh0kqdc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-lyDlXKk8O7D351jOpPtMLoXsufuYhjI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "817988241831-pa79qt3egrl21advhg1bpkl9vmh0kqdc.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "817988241831-vam87m8gn6p2acrrihjcji4deql09kih.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "pk.com.pieinthesky.app"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

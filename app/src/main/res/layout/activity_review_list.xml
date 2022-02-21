@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    tools:context=".ReviewListActivity">
+
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/main_window"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="5dp"
+                android:layout_marginBottom="10dp">
+
+
+                <pk.com.pieinthesky.app.widget.RoundCornerImageView
+                    android:id="@+id/ivPlaceImage"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/res_image"
+                    app:image_radius="20dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/ivPlaceImage"
+                    android:orientation="vertical"
+                    android:paddingLeft="8dp">
+
+                    <TextView
+                        android:id="@+id/tvPlaceName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="?fontFamilyMedium"
+                        android:text="Title"
+                        android:textColor="#383838"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tvTags"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Bbq, Pakistani, Seafood, Ice Cream"
+                        android:textColor="#696969"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="3dp"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/cvAvgRating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            app:cardBackgroundColor="#83ad3b"
+                            app:cardCornerRadius="4dp">
+
+                            <LinearLayout
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="6dp"
+                                android:paddingTop="3dp"
+                                android:paddingRight="6dp"
+                                android:paddingBottom="3dp">
+
+                                <ImageView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/p_star" />
+
+                                <TextView
+                                    android:id="@+id/tvAvgRating"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="5dp"
+                                    android:fontFamily="?fontFamilyMedium"
+                                    android:text="4.2"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/tvTotalReview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="5dp"
+                            android:text="100+ Reviews"
+                            android:textColor="@color/colorGreen"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="#f8f8f8" />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmer_PlaceReviewLoading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:shimmer_duration="800">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/place_search_placeholder_row" />
+
+                    <include layout="@layout/place_search_placeholder_row" />
+
+                    <include layout="@layout/place_search_placeholder_row" />
+
+
+                </LinearLayout>
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <pk.com.pieinthesky.app.widget.NonScrollListView
+                android:id="@+id/list_Review"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="#f8f8f8"
+                android:dividerHeight="8dp">
+            </pk.com.pieinthesky.app.widget.NonScrollListView>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ecf0f4" />
+
+            <LinearLayout
+                android:id="@+id/lyLoadReviews"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:padding="5dp" >
+
+                <ProgressBar
+
+                    android:id="@+id/more_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="?android:attr/progressBarStyleSmall" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Loading..."
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

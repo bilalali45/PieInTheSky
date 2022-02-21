@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".ProfileActivity">
+
+    <ScrollView
+        android:id="@+id/main_window"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/ivCoverPhoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/cover_photo" />
+
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/btnEditCover"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/ivCoverPhoto"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="10dp"
+                    android:alpha="0.8"
+                    android:orientation="horizontal"
+                    app:cardBackgroundColor="#525458"
+                    app:cardCornerRadius="4dp">
+
+                    <pk.com.pieinthesky.app.widget.IconButton
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:button_text=" Edit Cover"
+                        app:button_textSize="15sp"
+                        app:button_textColor="@color/colorWhite"
+                        app:button_iconName="@string/fa_camera_solid"
+                        app:button_solidIcon="true"></pk.com.pieinthesky.app.widget.IconButton>
+
+
+                </android.support.v7.widget.CardView>
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    style="@style/ProfileTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Profile Photo" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp">
+
+                    <pk.com.pieinthesky.app.widget.CircleImageView
+                        android:id="@+id/ivProfilePhoto"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="15dp"
+                        android:src="@drawable/review_user" />
+
+                    <pk.com.pieinthesky.app.widget.IconButton
+                        android:id="@+id/btnAddPhoto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        app:button_iconName="@string/fa_camera_solid"
+                        app:button_solidIcon="true"
+                        app:button_text="Add Photo"
+                        app:button_textColor="@color/colorAccent"
+                        app:button_textSize="20sp">
+
+                    </pk.com.pieinthesky.app.widget.IconButton>
+                </LinearLayout>
+
+                <TextView
+                    style="@style/ProfileTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="First Name" />
+
+                <EditText
+                    android:id="@+id/etFirstName"
+                    style="@style/ProfileEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#ecf0f4"
+                    android:singleLine="true" />
+
+
+                <TextView
+                    style="@style/ProfileTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Last Name" />
+
+                <EditText
+                    android:id="@+id/etLastName"
+                    style="@style/ProfileEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#ecf0f4"
+                    android:singleLine="true" />
+
+
+                <TextView
+                    style="@style/ProfileTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email Address" />
+
+                <EditText
+                    android:id="@+id/etEmailAddress"
+                    style="@style/ProfileEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#ecf0f4"
+                    android:inputType="textEmailAddress"
+                    android:enabled="false"
+                    android:singleLine="true" />
+
+                <TextView
+                    style="@style/ProfileTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mobile No." />
+
+                <EditText
+                    android:id="@+id/etMobileNo"
+                    style="@style/ProfileEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#ecf0f4"
+                    android:inputType="phone"
+                    android:singleLine="true" />
+
+                <TextView
+                    style="@style/ProfileTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Location" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/tvLocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/search_icon"
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical"
+                        android:onClick="tvLocation_onClick"
+                        android:layout_toLeftOf="@id/ivLocate"
+                        android:layout_alignParentLeft="true"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:id="@+id/ivLocate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/locate_icon"
+                        android:onClick="ivLocate_onClick"
+                        android:layout_alignParentRight="true"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="#CCCCCC" />
+
+                <TextView
+                    style="@style/ProfileTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Description" />
+
+                <EditText
+                    android:id="@+id/etDescription"
+                    style="@style/ProfileEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#ecf0f4"
+                    android:hint="Tell us something about yourself"
+                    android:maxLength="100" />
+
+                <Button
+                    android:id="@+id/btnSubmit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_bg_red_round"
+                    android:onClick="btnSubmit_onClick"
+                    android:text="Submit"
+                    android:textColor="@color/colorWhite" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

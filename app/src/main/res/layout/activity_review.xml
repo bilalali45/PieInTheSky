@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".ReviewActivity">
+
+    <ScrollView
+        android:id="@+id/main_window"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btnSubmitReview"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="5dp">
+
+
+                <pk.com.pieinthesky.app.widget.RoundCornerImageView
+                    android:id="@+id/ivPlaceImage"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/res_image"
+                    app:image_radius="20dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/ivPlaceImage"
+                    android:orientation="vertical"
+                    android:paddingLeft="8dp">
+
+                    <TextView
+                        android:id="@+id/tvPlaceName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="?fontFamilyMedium"
+                        android:text="Title"
+                        android:textColor="#383838"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tvTags"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Bbq, Pakistani, Seafood, Ice Cream"
+                        android:textColor="#696969"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="3dp"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/cvAvgRating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            app:cardBackgroundColor="#83ad3b"
+                            app:cardCornerRadius="4dp">
+
+                            <LinearLayout
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="6dp"
+                                android:paddingTop="3dp"
+                                android:paddingRight="6dp"
+                                android:paddingBottom="3dp">
+
+                                <ImageView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/p_star" />
+
+                                <TextView
+                                    android:id="@+id/tvAvgRating"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="5dp"
+                                    android:fontFamily="?fontFamilyMedium"
+                                    android:text="4.2"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/tvTotalReview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="5dp"
+                            android:text="100+ Reviews"
+                            android:textColor="@color/colorGreen"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="#f8f8f8" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="?fontFamilyMedium"
+                android:paddingLeft="10dp"
+                android:text="Rate your experience"
+                android:textColor="#383838"
+                android:textSize="20sp" />
+
+
+            <android.support.v7.widget.AppCompatRatingBar
+                android:id="@+id/rbPlaceRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:progressBackgroundTint="@color/colorControl"
+                android:progressDrawable="@drawable/rating_bar_bg"
+                android:secondaryProgressTint="@android:color/transparent"
+                android:stepSize="1" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:visibility="gone">
+
+
+                <TextView
+                    android:id="@+id/tvComfort"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/rbComfort"
+                    android:text="Comfort"
+                    android:textSize="18sp" />
+
+                <android.support.v7.widget.AppCompatRatingBar
+                    android:id="@+id/rbComfort"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:progressDrawable="@drawable/rating_bar_bg"
+                    android:stepSize="1" />
+
+                <TextView
+                    android:id="@+id/tvLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/rbLocation"
+                    android:text="Location"
+                    android:textSize="18sp" />
+
+                <android.support.v7.widget.AppCompatRatingBar
+                    android:id="@+id/rbLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rbComfort"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="5dp"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:progressDrawable="@drawable/rating_bar_bg"
+                    android:stepSize="1" />
+
+                <TextView
+                    android:id="@+id/tvFacilities"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/rbFacilities"
+                    android:text="Facilities"
+                    android:textSize="18sp" />
+
+                <android.support.v7.widget.AppCompatRatingBar
+                    android:id="@+id/rbFacilities"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rbLocation"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="5dp"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:progressDrawable="@drawable/rating_bar_bg"
+                    android:stepSize="1" />
+
+                <TextView
+                    android:id="@+id/tvStaff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/rbStaff"
+                    android:text="Staff"
+                    android:textSize="18sp" />
+
+                <android.support.v7.widget.AppCompatRatingBar
+                    android:id="@+id/rbStaff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rbFacilities"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="5dp"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:progressDrawable="@drawable/rating_bar_bg"
+                    android:stepSize="1" />
+
+                <TextView
+                    android:id="@+id/tvMoneyValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/rbMoneyValue"
+                    android:text="Value of Money"
+                    android:textSize="18sp" />
+
+                <android.support.v7.widget.AppCompatRatingBar
+                    android:id="@+id/rbMoneyValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rbStaff"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="5dp"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:progressDrawable="@drawable/rating_bar_bg"
+                    android:stepSize="1" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="#f8f8f8" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="?fontFamilyMedium"
+                android:paddingLeft="10dp"
+                android:text="Add Photos"
+                android:textColor="#383838"
+                android:textSize="20sp" />
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:id="@+id/flPhoto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="15dp"
+                app:flexWrap="wrap">
+
+                <pk.com.pieinthesky.app.widget.IconTextView
+                    android:id="@+id/btnAddPhoto"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginRight="5dp"
+                    android:background="#f8f8f8"
+                    android:text="@string/fa_camera_solid"
+                    android:textColor="#9d9d9d"
+                    android:textSize="40sp"
+                    app:solid_icon="true" />
+
+
+            </com.google.android.flexbox.FlexboxLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="#f8f8f8" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="?fontFamilyMedium"
+                android:paddingLeft="10dp"
+                android:text="Describe your experience"
+                android:textColor="#383838"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/etReviewText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:background="@drawable/edittext_bg_review"
+                android:gravity="top"
+                android:lines="5" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnSubmitReview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:onClick="btnSubmitReview_onClick"
+        android:text="Add Review"
+        android:textColor="@color/colorWhite" />
+
+</RelativeLayout>

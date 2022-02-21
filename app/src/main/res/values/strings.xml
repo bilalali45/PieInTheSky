@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Pie in the Sky</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="google_maps_key">AIzaSyA9wuP7Rl42YBuU4Xtqay7hMOmz60koYB4</string>
+    <string name="google_place_key">AIzaSyA9wuP7Rl42YBuU4Xtqay7hMOmz60koYB4</string>
+    <string name="fcm_default_notification_channel_id" translatable="false">fcm_default_channel</string>
+
+    <string name="facebook_app_id">310848343421897</string>
+    <string name="fb_login_protocol_scheme">fb310848343421897</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_bookmark">BookmarkActivity</string>
+
+    <string name="share_subject">Pie in the Sky</string>
+    <string name="share_text">Check out the amazing Pie in the Sky app.\n\nhttps://play.google.com/store/apps/details?id=pk.com.pieinthesky.app</string>
+</resources>
