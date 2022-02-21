@@ -32,7 +32,7 @@
                 android:paddingRight="5dp">
 
 
-                <pk.com.pieinthesky.app.widget.RoundCornerImageView
+                <pk.com.Taj.app.widget.RoundCornerImageView
                     android:id="@+id/ivPlaceImage"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
@@ -289,7 +289,7 @@
                 android:paddingBottom="15dp"
                 app:flexWrap="wrap">
 
-                <pk.com.pieinthesky.app.widget.IconTextView
+                <pk.com.Taj.app.widget.IconTextView
                     android:id="@+id/btnAddPhoto"
                     android:layout_width="70dp"
                     android:layout_height="70dp"

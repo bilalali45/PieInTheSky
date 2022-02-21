@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <pk.com.pieinthesky.app.widget.CircleImageView
+            <pk.com.Taj.app.widget.CircleImageView
                 android:id="@+id/ivUserPhoto"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
@@ -125,7 +125,7 @@
         android:paddingTop="5dp"
         android:paddingBottom="5dp">
 
-        <pk.com.pieinthesky.app.widget.IconButton
+        <pk.com.Taj.app.widget.IconButton
             android:id="@+id/btnLike"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -135,9 +135,9 @@
             android:background="?android:selectableItemBackground"
             app:button_textSize="15sp">
 
-        </pk.com.pieinthesky.app.widget.IconButton>
+        </pk.com.Taj.app.widget.IconButton>
 
-        <pk.com.pieinthesky.app.widget.IconButton
+        <pk.com.Taj.app.widget.IconButton
             android:id="@+id/btnComment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -148,6 +148,6 @@
             app:button_textColor="#9c9c9c"
             app:button_textSize="15sp">
 
-        </pk.com.pieinthesky.app.widget.IconButton>
+        </pk.com.Taj.app.widget.IconButton>
     </RelativeLayout>
 </LinearLayout>

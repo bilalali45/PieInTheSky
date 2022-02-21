@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         >
 
-        <pk.com.pieinthesky.app.widget.RoundCornerImageView
+        <pk.com.Taj.app.widget.RoundCornerImageView
             android:id="@+id/ivPlaceImage"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"

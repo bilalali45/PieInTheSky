@@ -12,7 +12,7 @@
         android:scaleType="fitXY"
         android:src="@drawable/no_image"/>
 
-    <pk.com.pieinthesky.app.widget.IconTextView
+    <pk.com.Taj.app.widget.IconTextView
         android:id="@+id/btnRemovePhoto"
         android:layout_alignRight="@id/ivPhoto"
         android:layout_width="wrap_content"

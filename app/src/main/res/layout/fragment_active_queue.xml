@@ -140,7 +140,7 @@
                         android:textColor="@color/colorPrimary"
                         android:textSize="16sp" />
 
-                    <pk.com.pieinthesky.app.widget.RoundCornerImageView
+                    <pk.com.Taj.app.widget.RoundCornerImageView
                         android:id="@+id/ivPlaceImage"
                         android:layout_width="130dp"
                         android:layout_height="120dp"

@@ -21,7 +21,7 @@
             android:paddingTop="35dp"
             android:paddingBottom="15dp">
 
-            <pk.com.pieinthesky.app.widget.IconTextView
+            <pk.com.Taj.app.widget.IconTextView
                 android:id="@+id/back_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -92,13 +92,13 @@
                     android:gravity="center"
                     android:orientation="horizontal">
 
-                    <pk.com.pieinthesky.app.widget.IconTextView
+                    <pk.com.Taj.app.widget.IconTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="5dp"
                         android:text="@string/fa_list_alt"
                         android:textColor="@color/colorPrimary"
-                        android:textSize="22sp"></pk.com.pieinthesky.app.widget.IconTextView>
+                        android:textSize="22sp"></pk.com.Taj.app.widget.IconTextView>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -179,7 +179,7 @@
                                 android:textColor="@color/colorBlack"
                                 android:textSize="18sp" />
 
-                            <pk.com.pieinthesky.app.widget.IconTextView
+                            <pk.com.Taj.app.widget.IconTextView
                                 android:id="@+id/cut_full_name"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -237,7 +237,7 @@
                                 android:textColor="@color/colorBlack"
                                 android:textSize="18sp" />
 
-                            <pk.com.pieinthesky.app.widget.IconTextView
+                            <pk.com.Taj.app.widget.IconTextView
                                 android:id="@+id/cut_email_id"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -294,7 +294,7 @@
                                 android:textColor="@color/colorBlack"
                                 android:textSize="18sp" />
 
-                            <pk.com.pieinthesky.app.widget.IconTextView
+                            <pk.com.Taj.app.widget.IconTextView
                                 android:id="@+id/cut_mob_num"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"

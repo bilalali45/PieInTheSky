@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="pk.com.pieinthesky.app">
+    package="pk.com.Taj.app">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -21,63 +21,63 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".RewardActivity" />
+        <activity android:name="pk.com.Taj.app.RewardActivity" />
         <activity
-            android:name=".CartCustomizeActivity"
+            android:name="pk.com.Taj.app.CartCustomizeActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".NoConnectionActivity"
+            android:name="pk.com.Taj.app.NoConnectionActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".AddQueueActivity" />
-        <activity android:name=".AddressListActivity" />
-        <activity android:name=".OrderDetailActivity" />
-        <activity android:name=".OrderListActivity" />
-        <activity android:name=".CartActivity" />
-        <activity android:name=".BarcodeScannerActivity" />
-        <activity android:name=".PlaceQueueActivity" />
-        <activity android:name=".TableBookingDetailActivity" />
-        <activity android:name=".TableBookingActivity" />
+        <activity android:name="pk.com.Taj.app.AddQueueActivity" />
+        <activity android:name="pk.com.Taj.app.AddressListActivity" />
+        <activity android:name="pk.com.Taj.app.OrderDetailActivity" />
+        <activity android:name="pk.com.Taj.app.OrderListActivity" />
+        <activity android:name="pk.com.Taj.app.CartActivity" />
+        <activity android:name="pk.com.Taj.app.BarcodeScannerActivity" />
+        <activity android:name="pk.com.Taj.app.PlaceQueueActivity" />
+        <activity android:name="pk.com.Taj.app.TableBookingDetailActivity" />
+        <activity android:name="pk.com.Taj.app.TableBookingActivity" />
         <activity
-            android:name=".CollectionDetailActivity"
+            android:name="pk.com.Taj.app.CollectionDetailActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".CollectionListActivity" />
-        <activity android:name=".SearchActivity" />
+        <activity android:name="pk.com.Taj.app.CollectionListActivity" />
+        <activity android:name="pk.com.Taj.app.SearchActivity" />
 
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />
 
         <activity
-            android:name=".GoogleLocationActivity"
+            android:name="pk.com.Taj.app.GoogleLocationActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".ImageViewerActivity"
+            android:name="pk.com.Taj.app.ImageViewerActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".LocationActivity"
+            android:name="pk.com.Taj.app.LocationActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ReviewListActivity" />
-        <activity android:name=".FollowFollowingActivity" />
-        <activity android:name=".UserTimelineActivity" />
-        <activity android:name=".CommentActivity" />
-        <activity android:name=".ReviewActivity" />
-        <activity android:name=".HelpSupportActivity" />
-        <activity android:name=".NotificationActivity" />
-        <activity android:name=".ProfileActivity" />
+        <activity android:name="pk.com.Taj.app.ReviewListActivity" />
+        <activity android:name="pk.com.Taj.app.FollowFollowingActivity" />
+        <activity android:name="pk.com.Taj.app.UserTimelineActivity" />
+        <activity android:name="pk.com.Taj.app.CommentActivity" />
+        <activity android:name="pk.com.Taj.app.ReviewActivity" />
+        <activity android:name="pk.com.Taj.app.HelpSupportActivity" />
+        <activity android:name="pk.com.Taj.app.NotificationActivity" />
+        <activity android:name="pk.com.Taj.app.ProfileActivity" />
         <activity
-            android:name=".PlaceDetailActivity"
+            android:name="pk.com.Taj.app.PlaceDetailActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".BookmarkActivity" />
-        <activity android:name=".VerifyOTPActivity" />
-        <activity android:name=".SendOTPActivity" />
-        <activity android:name=".ForgotPasswordActivity" />
-        <activity android:name=".SignUpActivity" />
-        <activity android:name=".LoginActivity" />
+        <activity android:name="pk.com.Taj.app.BookmarkActivity" />
+        <activity android:name="pk.com.Taj.app.VerifyOTPActivity" />
+        <activity android:name="pk.com.Taj.app.SendOTPActivity" />
+        <activity android:name="pk.com.Taj.app.ForgotPasswordActivity" />
+        <activity android:name="pk.com.Taj.app.SignUpActivity" />
+        <activity android:name="pk.com.Taj.app.LoginActivity" />
         <activity
-            android:name=".LoginSelectionActivity"
+            android:name="pk.com.Taj.app.LoginSelectionActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".SplashActivity"
+            android:name="pk.com.Taj.app.SplashActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.SplashTheme">
             <intent-filter>
@@ -87,15 +87,15 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".AppIntroActivity"
+            android:name="pk.com.Taj.app.AppIntroActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".MainActivity"
+            android:name="pk.com.Taj.app.MainActivity"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <provider
             android:name="android.support.v4.content.FileProvider"
-            android:authorities="pk.com.pieinthesky.app.fileProvider"
+            android:authorities="pk.com.Taj.app.fileProvider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
@@ -103,12 +103,12 @@
                 android:resource="@xml/provider_paths" />
         </provider>
 
-        <service android:name=".FirebaseIDService">
+        <service android:name="pk.com.Taj.app.FirebaseIDService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
-        <service android:name=".MyFirebaseMessagingService">
+        <service android:name="pk.com.Taj.app.MyFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>

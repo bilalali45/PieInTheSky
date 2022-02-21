@@ -66,7 +66,7 @@
                             android:layout_marginBottom="10dp"
                             android:background="@color/placeholder_bg" />
 
-                        <pk.com.pieinthesky.app.widget.IconButton
+                        <pk.com.Taj.app.widget.IconButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             app:button_iconName="@string/fa_thumbs_up_solid"
@@ -74,7 +74,7 @@
                             app:button_textColor="#9c9c9c"
                             app:button_textSize="15sp">
 
-                        </pk.com.pieinthesky.app.widget.IconButton>
+                        </pk.com.Taj.app.widget.IconButton>
 
                         <include layout="@layout/place_search_placeholder_row" />
 
@@ -101,7 +101,7 @@
                         android:layout_marginBottom="10dp">
 
 
-                        <pk.com.pieinthesky.app.widget.RoundCornerImageView
+                        <pk.com.Taj.app.widget.RoundCornerImageView
                             android:id="@+id/ivPlaceImage1"
                             android:layout_width="60dp"
                             android:layout_height="60dp"
@@ -213,7 +213,7 @@
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
 
-                            <pk.com.pieinthesky.app.widget.CircleImageView
+                            <pk.com.Taj.app.widget.CircleImageView
                                 android:id="@+id/ivUserPhoto"
                                 android:layout_width="40dp"
                                 android:layout_height="40dp"
@@ -304,7 +304,7 @@
                             android:paddingTop="10dp"
                             android:paddingBottom="5dp">
 
-                            <pk.com.pieinthesky.app.widget.IconButton
+                            <pk.com.Taj.app.widget.IconButton
                                 android:id="@+id/btnLike"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -314,7 +314,7 @@
                                 app:button_textColor="@color/colorNotLike"
                                 app:button_textSize="15sp">
 
-                            </pk.com.pieinthesky.app.widget.IconButton>
+                            </pk.com.Taj.app.widget.IconButton>
 
                         </RelativeLayout>
                     </LinearLayout>
@@ -325,11 +325,11 @@
                         android:layout_height="8dp"
                         android:background="#f8f8f8" />
 
-                    <pk.com.pieinthesky.app.widget.NonScrollListView
+                    <pk.com.Taj.app.widget.NonScrollListView
                         android:id="@+id/list_Comment"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:divider="@null"></pk.com.pieinthesky.app.widget.NonScrollListView>
+                        android:divider="@null"></pk.com.Taj.app.widget.NonScrollListView>
 
 
                 </LinearLayout>

@@ -41,7 +41,7 @@
                     android:paddingRight="5dp">
 
 
-                    <pk.com.pieinthesky.app.widget.RoundCornerImageView
+                    <pk.com.Taj.app.widget.RoundCornerImageView
                         android:id="@+id/ivPlaceImage"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
@@ -335,7 +335,7 @@
                         android:gravity="center"
                         android:orientation="horizontal">
 
-                        <pk.com.pieinthesky.app.widget.IconTextView
+                        <pk.com.Taj.app.widget.IconTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:background="@drawable/circle_gray"
@@ -363,7 +363,7 @@
                         android:gravity="center"
                         android:orientation="horizontal">
 
-                        <pk.com.pieinthesky.app.widget.IconTextView
+                        <pk.com.Taj.app.widget.IconTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:background="@drawable/circle_gray"

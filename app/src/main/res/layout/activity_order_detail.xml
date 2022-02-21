@@ -48,7 +48,7 @@
                     android:paddingRight="5dp">
 
 
-                    <pk.com.pieinthesky.app.widget.RoundCornerImageView
+                    <pk.com.Taj.app.widget.RoundCornerImageView
                         android:id="@+id/ivPlaceImage"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
@@ -207,11 +207,11 @@
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
 
-                            <pk.com.pieinthesky.app.widget.NonScrollListView
+                            <pk.com.Taj.app.widget.NonScrollListView
                                 android:id="@+id/list_OrderDetail"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:divider="@null"></pk.com.pieinthesky.app.widget.NonScrollListView>
+                                android:divider="@null"></pk.com.Taj.app.widget.NonScrollListView>
 
                             <View
                                 android:layout_width="match_parent"

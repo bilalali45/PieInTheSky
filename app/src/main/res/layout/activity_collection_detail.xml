@@ -131,13 +131,13 @@
 
             </com.facebook.shimmer.ShimmerFrameLayout>
 
-            <pk.com.pieinthesky.app.widget.NonScrollListView
+            <pk.com.Taj.app.widget.NonScrollListView
                 android:id="@+id/list_SearchPlace"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:divider="@null">
 
-            </pk.com.pieinthesky.app.widget.NonScrollListView>
+            </pk.com.Taj.app.widget.NonScrollListView>
 
             <LinearLayout
                 android:id="@+id/lyLoadPlaces"

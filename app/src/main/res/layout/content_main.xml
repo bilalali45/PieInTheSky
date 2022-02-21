@@ -206,7 +206,7 @@
             </com.facebook.shimmer.ShimmerFrameLayout>
 
 
-            <pk.com.pieinthesky.app.widget.NonScrollListView
+            <pk.com.Taj.app.widget.NonScrollListView
                 android:id="@+id/list_Restaurant"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

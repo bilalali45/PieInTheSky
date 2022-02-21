@@ -23,7 +23,7 @@
             android:textSize="12sp"
             android:textColor="@color/colorGray"/>
 
-        <pk.com.pieinthesky.app.widget.IconTextView
+        <pk.com.Taj.app.widget.IconTextView
             android:id="@+id/itvFilterRemove"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

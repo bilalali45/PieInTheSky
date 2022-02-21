@@ -63,13 +63,13 @@
                 android:gravity="center"
                 android:orientation="horizontal">
 
-                <pk.com.pieinthesky.app.widget.IconTextView
+                <pk.com.Taj.app.widget.IconTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:text="@string/fa_list_alt"
                     android:textColor="@color/colorPrimary"
-                    android:textSize="22sp"></pk.com.pieinthesky.app.widget.IconTextView>
+                    android:textSize="22sp"></pk.com.Taj.app.widget.IconTextView>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -110,7 +110,7 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <pk.com.pieinthesky.app.widget.NonScrollListView
+                <pk.com.Taj.app.widget.NonScrollListView
                     android:id="@+id/listCart"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

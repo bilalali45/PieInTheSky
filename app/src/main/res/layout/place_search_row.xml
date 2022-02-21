@@ -12,7 +12,7 @@
         android:layout_height="80dp"
         android:background="?android:selectableItemBackground">
 
-        <pk.com.pieinthesky.app.widget.RoundCornerImageView
+        <pk.com.Taj.app.widget.RoundCornerImageView
             android:id="@+id/ivPlaceImage"
             android:layout_width="60dp"
             android:layout_height="60dp"

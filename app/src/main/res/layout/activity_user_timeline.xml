@@ -118,7 +118,7 @@
                         android:orientation="horizontal"
                         app:cardCornerRadius="40dp">
 
-                        <pk.com.pieinthesky.app.widget.CircleImageView
+                        <pk.com.Taj.app.widget.CircleImageView
                             android:id="@+id/ivUserPhoto"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
@@ -144,7 +144,7 @@
                     android:layout_gravity="center"
                     android:orientation="horizontal">
 
-                    <pk.com.pieinthesky.app.widget.IconTextView
+                    <pk.com.Taj.app.widget.IconTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -246,14 +246,14 @@
                     android:orientation="vertical">
 
 
-                    <pk.com.pieinthesky.app.widget.NonScrollListView
+                    <pk.com.Taj.app.widget.NonScrollListView
                         android:id="@+id/list_Timeline"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:divider="#f8f8f8"
                         android:dividerHeight="8dp">
 
-                    </pk.com.pieinthesky.app.widget.NonScrollListView>
+                    </pk.com.Taj.app.widget.NonScrollListView>
 
                     <LinearLayout
                         android:id="@+id/lyLoadTimeline"
@@ -292,14 +292,14 @@
 
 
 
-                    <pk.com.pieinthesky.app.widget.NonScrollListView
+                    <pk.com.Taj.app.widget.NonScrollListView
                         android:id="@+id/list_Review"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:divider="#f8f8f8"
                         android:dividerHeight="8dp">
 
-                    </pk.com.pieinthesky.app.widget.NonScrollListView>
+                    </pk.com.Taj.app.widget.NonScrollListView>
 
                     <LinearLayout
                         android:id="@+id/lyLoadReviews"
@@ -433,7 +433,7 @@
                             android:paddingTop="5dp"
                             android:paddingBottom="5dp">
 
-                            <pk.com.pieinthesky.app.widget.IconButton
+                            <pk.com.Taj.app.widget.IconButton
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 app:button_iconName="@string/fa_thumbs_up_solid"
@@ -441,9 +441,9 @@
                                 app:button_textColor="#9c9c9c"
                                 app:button_textSize="15sp">
 
-                            </pk.com.pieinthesky.app.widget.IconButton>
+                            </pk.com.Taj.app.widget.IconButton>
 
-                            <pk.com.pieinthesky.app.widget.IconButton
+                            <pk.com.Taj.app.widget.IconButton
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_centerHorizontal="true"
@@ -452,7 +452,7 @@
                                 app:button_textColor="#9c9c9c"
                                 app:button_textSize="15sp">
 
-                            </pk.com.pieinthesky.app.widget.IconButton>
+                            </pk.com.Taj.app.widget.IconButton>
                         </RelativeLayout>
                     </LinearLayout>
 

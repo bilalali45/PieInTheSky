@@ -22,7 +22,7 @@
             android:textColor="#383838"
             android:textSize="22.0sp" />
 
-        <pk.com.pieinthesky.app.widget.RoundCornerImageView
+        <pk.com.Taj.app.widget.RoundCornerImageView
             android:id="@+id/ivPlaceImage"
             android:layout_width="90dp"
             android:layout_height="90dp"

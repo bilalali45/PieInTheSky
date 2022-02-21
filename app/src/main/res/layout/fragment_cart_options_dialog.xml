@@ -29,7 +29,7 @@
                 android:textColor="@color/colorBlack"
                 android:textSize="20sp" />
 
-            <pk.com.pieinthesky.app.widget.IconTextView
+            <pk.com.Taj.app.widget.IconTextView
                 android:id="@+id/tvClose"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -40,7 +40,7 @@
                 android:textSize="24sp"
                 app:solid_icon="true">
 
-            </pk.com.pieinthesky.app.widget.IconTextView>
+            </pk.com.Taj.app.widget.IconTextView>
 
         </LinearLayout>
 

@@ -61,7 +61,7 @@
                                     android:elevation="12dp"
                                     app:cardCornerRadius="31dp">
 
-                                    <pk.com.pieinthesky.app.widget.CircleImageView
+                                    <pk.com.Taj.app.widget.CircleImageView
                                         android:id="@+id/ivUserPhoto"
                                         android:layout_width="60dp"
                                         android:layout_height="60dp"
@@ -140,10 +140,10 @@
                 android:textColor="@color/colorBlack"
                 android:textSize="16sp" />
 
-            <pk.com.pieinthesky.app.widget.NonScrollListView
+            <pk.com.Taj.app.widget.NonScrollListView
                 android:id="@+id/list_PointDetail"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"></pk.com.pieinthesky.app.widget.NonScrollListView>
+                android:layout_height="wrap_content"></pk.com.Taj.app.widget.NonScrollListView>
 
             <View
                 android:layout_width="match_parent"

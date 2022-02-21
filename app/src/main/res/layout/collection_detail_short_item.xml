@@ -6,7 +6,7 @@
     android:layout_marginLeft="5dp"
     android:layout_marginRight="5dp">
 
-    <pk.com.pieinthesky.app.widget.RoundCornerImageView
+    <pk.com.Taj.app.widget.RoundCornerImageView
         android:id="@+id/ivCollectionImage"
         android:layout_width="match_parent"
         android:layout_height="170dp"

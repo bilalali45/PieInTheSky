@@ -21,7 +21,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <pk.com.pieinthesky.app.widget.RoundCornerImageView
+                <pk.com.Taj.app.widget.RoundCornerImageView
                     android:id="@+id/ivPlaceImage"
                     android:layout_width="50dp"
                     android:layout_height="50dp"

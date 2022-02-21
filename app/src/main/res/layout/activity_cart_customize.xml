@@ -15,7 +15,7 @@
         android:paddingTop="5dp"
         android:paddingBottom="15dp">
 
-        <pk.com.pieinthesky.app.widget.IconTextView
+        <pk.com.Taj.app.widget.IconTextView
             android:id="@+id/back_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -166,7 +166,7 @@
                     android:orientation="horizontal"
                     android:paddingBottom="10dp">
 
-                    <pk.com.pieinthesky.app.widget.IconTextView
+                    <pk.com.Taj.app.widget.IconTextView
                         android:id="@+id/btnPlus"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -177,7 +177,7 @@
                         android:textSize="24sp"
                         app:solid_icon="true">
 
-                    </pk.com.pieinthesky.app.widget.IconTextView>
+                    </pk.com.Taj.app.widget.IconTextView>
 
                     <TextView
                         android:id="@+id/tvQuantity"
@@ -190,7 +190,7 @@
                         android:textColor="#444e5e"
                         android:textSize="24sp" />
 
-                    <pk.com.pieinthesky.app.widget.IconTextView
+                    <pk.com.Taj.app.widget.IconTextView
                         android:id="@+id/btnMinus"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -201,7 +201,7 @@
                         android:textSize="24sp"
                         app:solid_icon="true">
 
-                    </pk.com.pieinthesky.app.widget.IconTextView>
+                    </pk.com.Taj.app.widget.IconTextView>
 
 
                 </LinearLayout>

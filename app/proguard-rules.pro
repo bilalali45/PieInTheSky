@@ -31,8 +31,8 @@
   public *;
 }
 
--keep class !pk.com.pieinthesky.app.** { *; }
--keep class pk.com.pieinthesky.app.beans.** {*; }
+-keep class !pk.com.Taj.app.** { *; }
+-keep class pk.com.Taj.app.beans.** {*; }
 
 -keep class me.dm7.barcodescanner.** {*; }
 -keep class net.sourceforge.zbar.** {*; }

@@ -33,7 +33,7 @@
                 android:layout_marginBottom="10dp">
 
 
-                <pk.com.pieinthesky.app.widget.RoundCornerImageView
+                <pk.com.Taj.app.widget.RoundCornerImageView
                     android:id="@+id/ivPlaceImage"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
@@ -154,13 +154,13 @@
 
             </com.facebook.shimmer.ShimmerFrameLayout>
 
-            <pk.com.pieinthesky.app.widget.NonScrollListView
+            <pk.com.Taj.app.widget.NonScrollListView
                 android:id="@+id/list_Review"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:divider="#f8f8f8"
                 android:dividerHeight="8dp">
-            </pk.com.pieinthesky.app.widget.NonScrollListView>
+            </pk.com.Taj.app.widget.NonScrollListView>
 
 
             <View

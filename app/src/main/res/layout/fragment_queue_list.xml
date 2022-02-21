@@ -43,13 +43,13 @@
             </com.facebook.shimmer.ShimmerFrameLayout>
 
 
-            <pk.com.pieinthesky.app.widget.NonScrollListView
+            <pk.com.Taj.app.widget.NonScrollListView
                 android:id="@+id/list_Queue"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:divider="@null">
-            </pk.com.pieinthesky.app.widget.NonScrollListView>
+            </pk.com.Taj.app.widget.NonScrollListView>
 
 
             <LinearLayout
