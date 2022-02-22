@@ -14,6 +14,17 @@ public class PlaceOverview {
     private String Tags;
     private List<Cuisine> Cuisine;
 
+
+    public String getDescrip() {
+        return descrip;
+    }
+
+    public void setDescrip(String descrip) {
+        this.descrip = descrip;
+    }
+
+    private String descrip;
+
     public String getPlaceId() {
         return PlaceId;
     }

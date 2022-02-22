@@ -216,16 +216,15 @@
         android:id="@+id/btn_next"
         android:layout_width="56dp"
         android:layout_height="56dp"
-        android:src="@drawable/next_arrow"
-        app:civ_border_width="2dp"
-        app:civ_border_color="#FFFF"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="15dp"
         android:background="@drawable/bg_circle_button"
-        android:tint="@color/colorWhite"
         android:onClick="btnNext_onClick"
-        />
+        android:src="@drawable/next_arrow"
+        android:tint="@color/colorWhite"
+        app:civ_border_color="#FFFF"
+        app:civ_border_width="2dp" />
 
 </RelativeLayout>

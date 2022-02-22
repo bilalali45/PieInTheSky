@@ -164,6 +164,7 @@ public class MainActivity extends AppCompatActivity
         restaurantList = new ArrayList<PlaceOverview>();
         PlaceOverview p1 = new PlaceOverview();
         p1.setPlaceName("Royal Taj Restaurant");
+        p1.setDescrip("Sandwich, Shakes, Cofee, Tea");
         p1.setTags("13 locations");
 
         restaurantList.add(p1);
@@ -171,16 +172,19 @@ public class MainActivity extends AppCompatActivity
         PlaceOverview p2 = new PlaceOverview();
         p2.setPlaceName("Piatto");
         p2.setTags("8 locations");
+        p2.setDescrip("Sandwich, Shakes, Cofee, Tea");
         restaurantList.add(p2);
 
         PlaceOverview p3 = new PlaceOverview();
         p3.setPlaceName("YELO");
         p3.setTags("5 locations");
+        p3.setDescrip("Ice Cream");
         restaurantList.add(p3);
 
 
         PlaceOverview p4 = new PlaceOverview();
         p4.setPlaceName("Mart");
+        p4.setDescrip("Sandwich, Shakes, Cofee, Tea");
         p4.setTags("13 locations");
         restaurantList.add(p4);
         restaurantOverviewAdapter = new RestaurantOverviewAdapter(MainActivity.this, restaurantList);
@@ -217,7 +221,7 @@ public class MainActivity extends AppCompatActivity
         List<SlideModel> imageList = new ArrayList<SlideModel>();
         imageList.add(new SlideModel("https://pieinthesky.com.pk/assets/images/cookiejar.jpg",null ,true));
         imageList.add(new SlideModel("https://pieinthesky.com.pk/assets/images/discountbanner.jpg",null ,true));
-        imageSlider.setImageList(imageList, true);
+      ///  imageSlider.setImageList(imageList, true);
         registerReceiver(networkStateReceiver, new IntentFilter(android.net.ConnectivityManager.CONNECTIVITY_ACTION));
         LocalBroadcastManager.getInstance(this).registerReceiver(loginRequestReceiver, new IntentFilter(ActivityRequest.REQUEST_LOGIN_ACTION));
 
@@ -687,7 +691,7 @@ public class MainActivity extends AppCompatActivity
 
 
             viewHolder.tvRestaurantName.setText(restaurantList.get(position).getPlaceName());
-            viewHolder.tvRestaurantDescription.setText(restaurantList.get(position).getCuisines());
+            viewHolder.tvRestaurantDescription.setText(restaurantList.get(position).getDescrip());
          //   viewHolder.tvRestaurantPlaces.setText(String.valueOf(restaurantList.get(position).getRestaurantPlaces()) + " locations");
 
             return convertView;

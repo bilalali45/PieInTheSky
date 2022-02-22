@@ -28,14 +28,23 @@
                 android:fitsSystemWindows="true"
                 app:layout_collapseMode="parallax">
 
-                <com.denzcoskun.imageslider.ImageSlider
-                    android:id="@+id/image_slider"
+
+                <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:delay="0"
-                    app:error_image="@drawable/image_slider_loading_1"
-                    app:period="1000"
-                    app:placeholder="@drawable/image_slider_loading_1" />
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/one">
+
+
+                </ImageView>
+<!--                <com.denzcoskun.imageslider.ImageSlider-->
+<!--                    android:id="@+id/image_slider"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    app:delay="0"-->
+<!--                    app:error_image="@drawable/image_slider_loading_1"-->
+<!--                    app:period="1000"-->
+<!--                    app:placeholder="@drawable/image_slider_loading_1" />-->
 
                 <LinearLayout
                     android:id="@+id/lySliderOverlay"

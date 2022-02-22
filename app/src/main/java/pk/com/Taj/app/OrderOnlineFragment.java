@@ -126,16 +126,12 @@ public class OrderOnlineFragment extends Fragment {
         tvDropDish = getView().findViewById(R.id.tvDropDish);
         lyFooter = getView().findViewById(R.id.lyFooter);
 
-
+        loading_progress.setVisibility(View.GONE);
         placeId = getArguments().getString("PlaceId");
         GSTPercentage = getArguments().getString("GSTPercentage");
         DeliveryCharges = getArguments().getString("DeliveryCharges");
 
-        Glide.with(this)
-                .load(getArguments().getString("PlaceImageURL"))
-                .centerCrop()
-                .placeholder(R.drawable.image_place_loading)
-                .into(ivPlaceImage);
+
 
         tvPlaceName.setText(getArguments().getString("PlaceName"));
         tvTags.setText(getArguments().getString("Tags"));
@@ -313,10 +309,25 @@ public class OrderOnlineFragment extends Fragment {
 
         if(tvPlaceName.getText().toString().equals("Royal Taj Restaurant")){
             GetMenuList(jsonObject_Tajhotel);
+            Glide.with(this)
+                    .load(R.drawable.one)
+                    .centerCrop()
+                    .placeholder(R.drawable.image_place_loading)
+                    .into(ivPlaceImage);
         }else if (tvPlaceName.getText().toString().equals("Piatto")){
             GetMenuList(jsonObject_paittoohotel);
+            Glide.with(this)
+                    .load(R.drawable.two)
+                    .centerCrop()
+                    .placeholder(R.drawable.image_place_loading)
+                    .into(ivPlaceImage);
         }else if (tvPlaceName.getText().toString().equals("YELO")){
             GetMenuList(jsonObject_yelohotel);
+            Glide.with(this)
+                    .load(R.drawable.three)
+                    .centerCrop()
+                    .placeholder(R.drawable.image_place_loading)
+                    .into(ivPlaceImage);
           //  GetMenuList(placeId);
         }
 
@@ -520,9 +531,14 @@ public class OrderOnlineFragment extends Fragment {
         } else {
             dishDetailList.clear();
             for (DishDetail dishDetail : menuDetails.get(categoryIndex).getDishList()) {
-                if (dishDetail.getDishName().toLowerCase().contains(dishName)) {
-                    dishDetailList.add(dishDetail);
+                try{
+                    if (dishDetail.getDishName().toLowerCase().contains(dishName)) {
+                        dishDetailList.add(dishDetail);
+                    }
+                }catch (Exception e){
+                    e.printStackTrace();
                 }
+
             }
         }
 
