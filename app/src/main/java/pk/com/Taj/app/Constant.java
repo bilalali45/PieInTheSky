@@ -5,6 +5,7 @@ import org.json.JSONObject;
 
 public class Constant {
    public static JSONObject jsonObject_Tajhotel;
+   public  static  String Pic_Baseurl = "http://demoapi.revaki.com.asp1-101.phx1-1.websitetestlink.com/Images/user/";
 
     static {
         try {

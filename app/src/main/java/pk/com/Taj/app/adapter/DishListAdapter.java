@@ -1,5 +1,7 @@
 package pk.com.Taj.app.adapter;
 
+import static pk.com.Taj.app.Constant.Pic_Baseurl;
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -61,7 +63,7 @@ public class DishListAdapter extends BaseAdapter {
 
         ///pic
         Glide.with(context)
-                .load("")
+                .load(Pic_Baseurl+dishDetailList.get(position).getImageURL())
                 .centerCrop()
                 .placeholder(R.drawable.image_dish_loading)
                 .into(viewHolder.ivDishImage);
