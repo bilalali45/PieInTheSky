@@ -137,7 +137,11 @@ public class CartActivity extends AppCompatActivity {
                 Gson gson = new GsonBuilder().serializeNulls().setDateFormat("yyyy-MM-dd HH:mm:ss").create();
                 String orderData = gson.toJson(orderMaster);
 
-                CreateOrderTask(orderData);
+                orderMaster = null;
+                Configuration.setOrderMaster(orderMaster);
+                rlCart.setVisibility(View.GONE);
+                rlCartCompleted.setVisibility(View.VISIBLE);
+             ///   CreateOrderTask(orderData);
             }
         });
 
@@ -152,7 +156,7 @@ public class CartActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(CartActivity.this, OrderDetailActivity.class);
-                intent.putExtra("OrderId", tvOrderNo.getTag().toString());
+                intent.putExtra("OrderId","#3313");
                 startActivity(intent);
                 finish();
             }

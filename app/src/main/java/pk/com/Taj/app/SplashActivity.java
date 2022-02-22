@@ -81,8 +81,8 @@ public class SplashActivity extends AppCompatActivity {
 
         if (Configuration.isAppLoaded() == false) {
             MyFirebaseMessagingService.createNotificationChannel(this);
-            FirebaseMessaging.getInstance().subscribeToTopic("pits-all");
-            FirebaseMessaging.getInstance().subscribeToTopic("pits-android");
+            FirebaseMessaging.getInstance().subscribeToTopic("taj-all");
+            FirebaseMessaging.getInstance().subscribeToTopic("taj-android");
             LocalDataManager.getInstance().putBoolean("AppLoaded", true);
         }
 

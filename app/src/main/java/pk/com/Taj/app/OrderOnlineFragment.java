@@ -1,6 +1,10 @@
 package pk.com.Taj.app;
 
 
+import static pk.com.Taj.app.Constant.jsonObject_Tajhotel;
+import static pk.com.Taj.app.Constant.jsonObject_paittoohotel;
+import static pk.com.Taj.app.Constant.jsonObject_yelohotel;
+
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -40,9 +44,9 @@ import pk.com.Taj.app.connectivity.ServiceManager;
 import pk.com.Taj.app.helper.ActivityRequest;
 import pk.com.Taj.app.helper.CommonUtils;
 import pk.com.Taj.app.helper.UIHelper;
-import pk.com.Taj.app.utils.BackgroundRequest;
 import pk.com.Taj.app.widget.RoundCornerImageView;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.Serializable;
@@ -140,6 +144,28 @@ public class OrderOnlineFragment extends Fragment {
 
 
         orderMaster = Configuration.getOrderMaster();
+
+//        dishDetailList = new ArrayList<>();
+//        DishDetail p1 = new DishDetail();
+//        p1.setDishName("Buttery Garlic Bread");
+//        p1.setImageURL("Royal Taj Restaurant");
+//        p1.setTotalPrice(135);
+//        p1.setDishId("57970f6c-e17e-4b8f-ae11-1ed21d970a6a");
+//        dishDetailList.add(p1);
+//
+//
+//        DishDetail p3 = new DishDetail();
+//        p1.setDishName("Mexican Fries");
+//        p1.setImageURL("Royal Taj Restaurant");
+//        p1.setTotalPrice(335);
+//        p1.setDishId("2f570d26-0adc-4f20-bcdb-9320a7bdf55e");
+//        dishDetailList.add(p1);
+       // DishVariant v1 = new DishVariant();
+       // v1.set();
+
+
+
+
 
         if (orderMaster != null) {
             if (orderMaster.getPlaceId().equals(placeId) == false) {
@@ -285,7 +311,16 @@ public class OrderOnlineFragment extends Fragment {
             }
         });
 
-        GetMenuList(placeId);
+        if(tvPlaceName.getText().toString().equals("Royal Taj Restaurant")){
+            GetMenuList(jsonObject_Tajhotel);
+        }else if (tvPlaceName.getText().toString().equals("Piatto")){
+            GetMenuList(jsonObject_paittoohotel);
+        }else if (tvPlaceName.getText().toString().equals("YELO")){
+            GetMenuList(jsonObject_yelohotel);
+          //  GetMenuList(placeId);
+        }
+
+
 
     }
 
@@ -496,60 +531,93 @@ public class OrderOnlineFragment extends Fragment {
 
     }
 
-    private void GetMenuList(final String PlaceId) {
+    private void GetMenuList(final JSONObject jsonObject) {
 
-        new BackgroundRequest<String, Void, JSONObject>() {
+        Gson gson = new GsonBuilder().serializeNulls().setDateFormat("yyyy-MM-dd HH:mm:ss").create();
+        Type type;
+        try {
+            type = new TypeToken<List<MenuDetail>>() {
+            }.getType();
+            menuDetails = gson.fromJson(jsonObject.getJSONArray("MenuList").toString(),type);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
 
-            protected void onPreExecute() {
-                loading_progress.setVisibility(View.VISIBLE);
-            }
 
-            @Override
-            protected JSONObject doInBackground(String... params) {
-                JSONObject jobject;
-                jobject = serviceManager.MenuList(PlaceId);
+        MenuDetail allMenu = new MenuDetail();
+        allMenu.setCategoryId("0");
+        allMenu.setCategoryName("All");
 
-                return jobject;
-            }
+        List<DishDetail> allDishDetail = new ArrayList<DishDetail>();
 
-            protected void onPostExecute(JSONObject jsonObject) {
-                loading_progress.setVisibility(View.GONE);
-                try {
-                    Type type;
-                    Gson gson = new GsonBuilder().serializeNulls().setDateFormat("yyyy-MM-dd HH:mm:ss").create();
+        for (MenuDetail menuDetail : menuDetails) {
+            allDishDetail.addAll(menuDetail.getDishList());
+        }
+        allMenu.setDishList(allDishDetail);
+        menuDetails.add(0, allMenu);
 
-                    final boolean status = jsonObject.getBoolean("Status");
-                    if (status) {
-                        type = new TypeToken<List<MenuDetail>>() {
-                        }.getType();
+        for (MenuDetail menuDetail : menuDetails) {
+            TabLayout.Tab tab = tabCategoryList.newTab();
+            tab.setText(menuDetail.getCategoryName());
+            tab.setTag(menuDetail.getCategoryId());
+            tabCategoryList.addTab(tab);
+        }
 
-                        menuDetails = gson.fromJson(jsonObject.getJSONArray("MenuList").toString(), type);
 
-                        MenuDetail allMenu = new MenuDetail();
-                        allMenu.setCategoryId("0");
-                        allMenu.setCategoryName("All");
 
-                        List<DishDetail> allDishDetail = new ArrayList<DishDetail>();
 
-                        for (MenuDetail menuDetail : menuDetails) {
-                            allDishDetail.addAll(menuDetail.getDishList());
-                        }
-                        allMenu.setDishList(allDishDetail);
-                        menuDetails.add(0, allMenu);
-
-                        for (MenuDetail menuDetail : menuDetails) {
-                            TabLayout.Tab tab = tabCategoryList.newTab();
-                            tab.setText(menuDetail.getCategoryName());
-                            tab.setTag(menuDetail.getCategoryId());
-                            tabCategoryList.addTab(tab);
-                        }
-                    }
-
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        }.execute();
+//        new BackgroundRequest<String, Void, JSONObject>() {
+//
+//            protected void onPreExecute() {
+//                loading_progress.setVisibility(View.VISIBLE);
+//            }
+//
+//            @Override
+//            protected JSONObject doInBackground(String... params) {
+//                JSONObject jobject;
+//                jobject = serviceManager.MenuList(PlaceId);
+//
+//                return jobject;
+//            }
+//
+//            protected void onPostExecute(JSONObject jsonObject) {
+//                loading_progress.setVisibility(View.GONE);
+//                try {
+//                    Type type;
+//                    Gson gson = new GsonBuilder().serializeNulls().setDateFormat("yyyy-MM-dd HH:mm:ss").create();
+//
+//                    final boolean status = jsonObject.getBoolean("Status");
+//                    if (status) {
+//                        type = new TypeToken<List<MenuDetail>>() {
+//                        }.getType();
+//
+//                        menuDetails = gson.fromJson(jsonObject.getJSONArray("MenuList").toString(), type);
+//
+//                        MenuDetail allMenu = new MenuDetail();
+//                        allMenu.setCategoryId("0");
+//                        allMenu.setCategoryName("All");
+//
+//                        List<DishDetail> allDishDetail = new ArrayList<DishDetail>();
+//
+//                        for (MenuDetail menuDetail : menuDetails) {
+//                            allDishDetail.addAll(menuDetail.getDishList());
+//                        }
+//                        allMenu.setDishList(allDishDetail);
+//                        menuDetails.add(0, allMenu);
+//
+//                        for (MenuDetail menuDetail : menuDetails) {
+//                            TabLayout.Tab tab = tabCategoryList.newTab();
+//                            tab.setText(menuDetail.getCategoryName());
+//                            tab.setTag(menuDetail.getCategoryId());
+//                            tabCategoryList.addTab(tab);
+//                        }
+//                    }
+//
+//                } catch (Exception e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        }.execute();
     }
 
 

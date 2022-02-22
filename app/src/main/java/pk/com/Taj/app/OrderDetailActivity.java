@@ -85,10 +85,10 @@ public class OrderDetailActivity extends AppCompatActivity {
         tvTotalAmount = findViewById(R.id.tvTotalAmount);
 
 
-        lyLoading.setVisibility(View.VISIBLE);
-        containerOrderDetail.setVisibility(View.GONE);
+      //  lyLoading.setVisibility(View.VISIBLE);
+        //containerOrderDetail.setVisibility(View.GONE);
 
-        OrderDetailTask(orderId);
+      ///  OrderDetailTask(orderId);
     }
 
     public void btnReorder_onClick(View view) {

@@ -408,7 +408,7 @@ public class ReviewActivity extends AppCompatActivity {
 
     private File createTempImageFile() {
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-        File file = new File(Environment.getExternalStorageDirectory().getPath() + "/Pits/temp", "TMP_" + timeStamp + ".jpg");
+        File file = new File(Environment.getExternalStorageDirectory().getPath() + "/taj/temp", "TMP_" + timeStamp + ".jpg");
         return file;
     }
 

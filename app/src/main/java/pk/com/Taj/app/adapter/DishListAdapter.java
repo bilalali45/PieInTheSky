@@ -42,7 +42,7 @@ public class DishListAdapter extends BaseAdapter {
 
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
-
+        try {
         ViewHolder viewHolder;
         if (convertView == null) {
             LayoutInflater layoutInflater = LayoutInflater.from(context);
@@ -59,14 +59,20 @@ public class DishListAdapter extends BaseAdapter {
             viewHolder = (ViewHolder) convertView.getTag();
         }
 
+        ///pic
         Glide.with(context)
-                .load(dishDetailList.get(position).getImageURL())
+                .load("")
                 .centerCrop()
                 .placeholder(R.drawable.image_dish_loading)
                 .into(viewHolder.ivDishImage);
 
-        viewHolder.tvDishName.setText(dishDetailList.get(position).getDishName());
-        viewHolder.tvDishPrice.setText("Rs. " + CommonUtils.formatTwoDecimal(dishDetailList.get(position).getTotalPrice()));
+
+            if(dishDetailList.get(position).getDishName() != null) {
+                viewHolder.tvDishName.setText(dishDetailList.get(position).getDishName());
+                viewHolder.tvDishPrice.setText("Rs. " + CommonUtils.formatTwoDecimal(dishDetailList.get(position).getTotalPrice()));
+            }
+
+
 
         if(dishDetailList.get(position).isSelected())
         {
@@ -76,7 +82,9 @@ public class DishListAdapter extends BaseAdapter {
         {
             viewHolder.ivAdd.setImageResource(R.drawable.add_cart);
         }
-
+        }catch (Exception e){
+            e.printStackTrace();
+        }
         return convertView;
     }
 

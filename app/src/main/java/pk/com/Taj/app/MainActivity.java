@@ -46,6 +46,7 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import pk.com.Taj.app.beans.AddressDetail;
 import pk.com.Taj.app.beans.LocationDetail;
+import pk.com.Taj.app.beans.PlaceOverview;
 import pk.com.Taj.app.beans.RestaurantDetail;
 import pk.com.Taj.app.beans.User;
 import pk.com.Taj.app.connectivity.ServiceManager;
@@ -87,7 +88,7 @@ public class MainActivity extends AppCompatActivity
     private ShimmerFrameLayout shimmer_Restaurant;
     private NonScrollListView list_Restaurant;
 
-    private List<RestaurantDetail> restaurantList = null;
+    private List<PlaceOverview> restaurantList = null;
     private RestaurantOverviewAdapter restaurantOverviewAdapter = null;
 
     private NavigationView navigationView = null;
@@ -144,7 +145,7 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        Configuration.setIsLocationSet(LocalDataManager.getInstance().getBoolean("LocationSet"));
+       /// Configuration.setIsLocationSet(LocalDataManager.getInstance().getBoolean("LocationSet"));
 
         if (Configuration.isLocationSet() == false) {
             isLocate = true;
@@ -156,52 +157,37 @@ public class MainActivity extends AppCompatActivity
             locationDetail = gson.fromJson(LocalDataManager.getInstance().getString("Location"), LocationDetail.class);
             Configuration.setCurrentLocation(locationDetail);
             tvToolbarTitle.setText(locationDetail.getAddress());
-
             checkLocationPermission();
         }
 
-        /*
 
         restaurantList = new ArrayList<PlaceOverview>();
-
         PlaceOverview p1 = new PlaceOverview();
-        p1.setPlaceName("Pie in the Sky");
+        p1.setPlaceName("Royal Taj Restaurant");
         p1.setTags("13 locations");
-        p1.setProfileImageURL("https://i0.wp.com/creativepakistan.pk/wp-content/uploads/2020/01/Pie-in-the-Sky-zamzama.jpg");
+
         restaurantList.add(p1);
 
         PlaceOverview p2 = new PlaceOverview();
-        p2.setPlaceName("Chatterbox Cafe");
+        p2.setPlaceName("Piatto");
         p2.setTags("8 locations");
-        p2.setProfileImageURL("http://1.bp.blogspot.com/_zCIMUWoa_GM/S2A1KbUJawI/AAAAAAAAAFM/tGs00AYIqNs/s640/P1220011.JPG");
         restaurantList.add(p2);
 
         PlaceOverview p3 = new PlaceOverview();
-        p3.setPlaceName("Chatterbox Deli");
+        p3.setPlaceName("YELO");
         p3.setTags("5 locations");
-        p3.setProfileImageURL("https://c.tribune.com.pk/2018/05/1-1525243872.png");
         restaurantList.add(p3);
-        restaurantList = new ArrayList<PlaceOverview>();
 
-        PlaceOverview p1 = new PlaceOverview();
-        p1.setPlaceName("Pie in the Sky");
-        p1.setTags("13 locations");
-        p1.setProfileImageURL("https://i0.wp.com/creativepakistan.pk/wp-content/uploads/2020/01/Pie-in-the-Sky-zamzama.jpg");
-        restaurantList.add(p1);
 
-        PlaceOverview p2 = new PlaceOverview();
-        p2.setPlaceName("Chatterbox Cafe");
-        p2.setTags("8 locations");
-        p2.setProfileImageURL("http://1.bp.blogspot.com/_zCIMUWoa_GM/S2A1KbUJawI/AAAAAAAAAFM/tGs00AYIqNs/s640/P1220011.JPG");
-        restaurantList.add(p2);
+        PlaceOverview p4 = new PlaceOverview();
+        p4.setPlaceName("Mart");
+        p4.setTags("13 locations");
+        restaurantList.add(p4);
+        restaurantOverviewAdapter = new RestaurantOverviewAdapter(MainActivity.this, restaurantList);
 
-        PlaceOverview p3 = new PlaceOverview();
-        p3.setPlaceName("Chatterbox Deli");
-        p3.setTags("5 locations");
-        p3.setProfileImageURL("https://c.tribune.com.pk/2018/05/1-1525243872.png");
-        restaurantList.add(p3);
-        * */
-        RestaurantListTask();
+        list_Restaurant.setAdapter(restaurantOverviewAdapter);
+
+      ///  RestaurantListTask();
 
         list_Restaurant.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -223,18 +209,15 @@ public class MainActivity extends AppCompatActivity
                         .add(android.R.id.content, dialog)
                         .addToBackStack("Main")
                         .commit();
+
             }
         });
 
 
         List<SlideModel> imageList = new ArrayList<SlideModel>();
-
-
-            imageList.add(new SlideModel("https://pieinthesky.com.pk/assets/images/cookiejar.jpg",null ,true));
+        imageList.add(new SlideModel("https://pieinthesky.com.pk/assets/images/cookiejar.jpg",null ,true));
         imageList.add(new SlideModel("https://pieinthesky.com.pk/assets/images/discountbanner.jpg",null ,true));
-
         imageSlider.setImageList(imageList, true);
-
         registerReceiver(networkStateReceiver, new IntentFilter(android.net.ConnectivityManager.CONNECTIVITY_ACTION));
         LocalBroadcastManager.getInstance(this).registerReceiver(loginRequestReceiver, new IntentFilter(ActivityRequest.REQUEST_LOGIN_ACTION));
 
@@ -250,6 +233,8 @@ public class MainActivity extends AppCompatActivity
             }
         }
     };
+
+
 
 
     private void RestaurantListTask() {
@@ -279,17 +264,11 @@ public class MainActivity extends AppCompatActivity
                     final int statusCode = jsonObject.getInt("StatusCode");
                     if (status) {
                         JSONArray restaurantListData = jsonObject.getJSONArray("highRatingData");
-
                         type = new TypeToken<List<RestaurantDetail>>() {
                         }.getType();
-
                         restaurantList = gson.fromJson(restaurantListData.toString(), type);
-
                         restaurantOverviewAdapter = new RestaurantOverviewAdapter(MainActivity.this, restaurantList);
-
                         list_Restaurant.setAdapter(restaurantOverviewAdapter);
-
-
                     } else {
                         UIHelper.showShortToast(MainActivity.this, jsonObject.getString("Message"));
                     }
@@ -371,33 +350,33 @@ public class MainActivity extends AppCompatActivity
 
     private void locate() {
 
-        if (GPSManager.getInstance().isLocationEnabled()) {
-            LocationActivity locationActivity = new LocationActivity();
-            locationDetail = locationActivity.getCurrentLocation(this);
-
-            if (locationDetail != null) {
-                Configuration.setCurrentLocation(locationDetail);
-                tvToolbarTitle.setText(locationDetail.getAddress());
-
-                if (Configuration.isLocationSet() == false) {
-                    saveLocation();
-                }
-            }
-        } else {
-            UIHelper.showConfirmDialog(this, "", "The app need location service for get your current location, please enable location service or set manually.",
-                    "Set Manually", "Enable", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            openLocationActivity();
-                        }
-                    }, new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            startActivityForResult(new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS), ActivityRequest.REQUEST_ENABLE_LOCATION);
-
-                        }
-                    });
-        }
+//        if (GPSManager.getInstance().isLocationEnabled()) {
+//            LocationActivity locationActivity = new LocationActivity();
+//            locationDetail = locationActivity.getCurrentLocation(this);
+//
+//            if (locationDetail != null) {
+//                Configuration.setCurrentLocation(locationDetail);
+//                tvToolbarTitle.setText(locationDetail.getAddress());
+//
+//                if (Configuration.isLocationSet() == false) {
+//                    saveLocation();
+//                }
+//            }
+//        } else {
+//            UIHelper.showConfirmDialog(this, "", "The app need location service for get your current location, please enable location service or set manually.",
+//                    "Set Manually", "Enable", new DialogInterface.OnClickListener() {
+//                        @Override
+//                        public void onClick(DialogInterface dialog, int which) {
+//                            openLocationActivity();
+//                        }
+//                    }, new DialogInterface.OnClickListener() {
+//                        @Override
+//                        public void onClick(DialogInterface dialog, int which) {
+//                            startActivityForResult(new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS), ActivityRequest.REQUEST_ENABLE_LOCATION);
+//
+//                        }
+//                    });
+//        }
     }
 
     private void showAddressSelectionDialog() {
@@ -637,9 +616,9 @@ public class MainActivity extends AppCompatActivity
 
     private class RestaurantOverviewAdapter extends BaseAdapter {
         private Context context;
-        private List<RestaurantDetail> restaurantList = null;
+        private List<PlaceOverview> restaurantList = null;
 
-        public RestaurantOverviewAdapter(Context context, List<RestaurantDetail> restaurantList) {
+        public RestaurantOverviewAdapter(Context context, List<PlaceOverview> restaurantList) {
             this.context = context;
             this.restaurantList = restaurantList;
         }
@@ -679,16 +658,37 @@ public class MainActivity extends AppCompatActivity
             }
 
 
-            Glide.with(context)
-                    .load(restaurantList.get(position).getProfileImageURL())
-                    .centerCrop()
-                    .placeholder(R.drawable.image_slider_loading)
-                    .into(viewHolder.ivRestaurantImage);
+            if(position == 0){
+                Glide.with(context)
+                        .load(R.drawable.one)
+                        .centerCrop()
+                        .placeholder(R.drawable.image_slider_loading)
+                        .into(viewHolder.ivRestaurantImage);
+            }else if(position == 1){
+                Glide.with(context)
+                        .load(R.drawable.two)
+                        .centerCrop()
+                        .placeholder(R.drawable.image_slider_loading)
+                        .into(viewHolder.ivRestaurantImage);
+            }else if(position == 2){
+                Glide.with(context)
+                        .load(R.drawable.three)
+                        .centerCrop()
+                        .placeholder(R.drawable.image_slider_loading)
+                        .into(viewHolder.ivRestaurantImage);
+            }else if(position == 3){
+                Glide.with(context)
+                        .load(R.drawable.four)
+                        .centerCrop()
+                        .placeholder(R.drawable.image_slider_loading)
+                        .into(viewHolder.ivRestaurantImage);
+            }
+
 
 
             viewHolder.tvRestaurantName.setText(restaurantList.get(position).getPlaceName());
             viewHolder.tvRestaurantDescription.setText(restaurantList.get(position).getCuisines());
-            viewHolder.tvRestaurantPlaces.setText(String.valueOf(restaurantList.get(position).getRestaurantPlaces()) + " locations");
+         //   viewHolder.tvRestaurantPlaces.setText(String.valueOf(restaurantList.get(position).getRestaurantPlaces()) + " locations");
 
             return convertView;
         }
