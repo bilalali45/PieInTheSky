@@ -2,6 +2,7 @@ package pk.com.Taj.app;
 
 
 import static pk.com.Taj.app.Constant.jsonObject_Tajhotel;
+import static pk.com.Taj.app.Constant.jsonObject_mart;
 import static pk.com.Taj.app.Constant.jsonObject_paittoohotel;
 import static pk.com.Taj.app.Constant.jsonObject_yelohotel;
 
@@ -329,11 +330,19 @@ public class OrderOnlineFragment extends Fragment {
                     .placeholder(R.drawable.image_place_loading)
                     .into(ivPlaceImage);
           //  GetMenuList(placeId);
+        }else {
+            GetMenuList(jsonObject_Tajhotel);
+            Glide.with(this)
+                    .load(R.drawable.four)
+                    .centerCrop()
+                    .placeholder(R.drawable.image_place_loading)
+                    .into(ivPlaceImage);
         }
 
 
 
     }
+
 
 
     private void selectItem(ImageView ivDishImage, int position) {
@@ -635,6 +644,7 @@ public class OrderOnlineFragment extends Fragment {
 //            }
 //        }.execute();
     }
+
 
 
 }

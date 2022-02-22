@@ -5,7 +5,114 @@ import org.json.JSONObject;
 
 public class Constant {
    public static JSONObject jsonObject_Tajhotel;
-   public  static  String Pic_Baseurl = "http://demoapi.revaki.com.asp1-101.phx1-1.websitetestlink.com/Images/user/";
+   public  static  String Pic_Baseurl = "http://www.tajresturantappapi.com.asp1-101.phx1-1.websitetestlink.com/";
+
+
+    public static JSONObject jsonObject_mart;
+    static {
+        try {
+            jsonObject_mart = new JSONObject("{\n" +
+                    " \"MenuList\":[\n" +
+                    "\t\t{\n" +
+                    "\t\t\t\"CategoryId\": \"6eef1ec1-8355-4cb6-8857-695aaf6b56bc\",\n" +
+                    "\t\t\t\"CategoryName\": \"Starters\",\n" +
+                    "\t\t\t\"DishList\":[\n" +
+                    "\t\t\t\t{\n" +
+                    "\t\t\t\t\t\"DishId\": \"57970f6c-e17e-4b8f-ae11-1ed21d970a6a\",\n" +
+                    "\t\t\t\t\t \"DishName\": \"Loaded Fries\",\n" +
+                    "\t\t\t\t\t\"Description\":\"Imported French Bread layered in garlic butter and served with a distinct marinara sauce.\",\n" +
+                    "\t\t\t\t\t\"ImageURL\": \"butter-garlic-bread.jpg\",\n" +
+                    "\t\t\t\t\t\"TotalPrice\": 135.0,\n" +
+                    "\t\t\t\t\t\"AvailabilityStatusId\": 1,\n" +
+                    "\t\t\t\t\t\"Variants\":[]\n" +
+                    "\t\t\t\t},{\n" +
+                    "\t\t\t\t\t\"DishId\": \"57970f6c-e17e-4b8f-ae11-1ed21d970a6a\",\n" +
+                    "\t\t\t\t\t\"DishName\": \"Yelo\",\n" +
+                    "\t\t\t\t\t\"Description\":\"Imported French Bread layered in garlic butter and served with a distinct marinara sauce.\",\n" +
+                    "\t\t\t\t\t\"ImageURL\": \"butter-garlic-bread.jpg\",\n" +
+                    "\t\t\t\t\t\"TotalPrice\": 135.0,\n" +
+                    "\t\t\t\t\t\"AvailabilityStatusId\": 1,\n" +
+                    "\t\t\t\t\t\"Variants\":[]\n" +
+                    "\t\t\t\t},{\n" +
+                    "\t\t\t\t\t\"DishId\": \"57970f6c-e17e-4b8f-ae11-1ed21d970a6a\",\n" +
+                    "\t\t\t\t\t\"DishName\": \"Yelo\",\n" +
+                    "\t\t\t\t\t\"Description\":\"Imported French Bread layered in garlic butter and served with a distinct marinara sauce.\",\n" +
+                    "\t\t\t\t\t\"ImageURL\": \"butter-garlic-bread.jpg\",\n" +
+                    "\t\t\t\t\t\"TotalPrice\": 135.0,\n" +
+                    "\t\t\t\t\t\"AvailabilityStatusId\": 1,\n" +
+                    "\t\t\t\t\t\"Variants\":[]\n" +
+                    "\t\t\t\t},{\n" +
+                    "\t\t\t\t\t\"DishId\": \"57970f6c-e17e-4b8f-ae11-1ed21d970a6a\",\n" +
+                    "\t\t\t\t\t\"DishName\": \"Yelo\",\n" +
+                    "\t\t\t\t\t\"Description\":\"Imported French Bread layered in garlic butter and served with a distinct marinara sauce.\",\n" +
+                    "\t\t\t\t\t\"ImageURL\": \"butter-garlic-bread.jpg\",\n" +
+                    "\t\t\t\t\t\"TotalPrice\": 135.0,\n" +
+                    "\t\t\t\t\t\"AvailabilityStatusId\": 1,\n" +
+                    "\t\t\t\t\t\"Variants\":[]\n" +
+                    "\t\t\t\t}\n" +
+                    "\t\t\t]\n" +
+                    "\t\t},\n" +
+                    "                {\n" +
+                    "\t\t\t\"CategoryId\": \"f90b8e04eaad44cab4d70c9c283e05d9\",\n" +
+                    "\t\t\t\"CategoryName\": \"Soups\",\n" +
+                    "\t\t\t\"DishList\":[\n" +
+                    "\t\t\t\t{\n" +
+                    "\t\t\t\t\t\"DishId\": \"ee853c83-de0d-49d3-8588-2271698aa8ae\",\n" +
+                    "\t\t\t\t\t\"DishName\": \"Chicken Corn Soup\",\n" +
+                    "\t\t\t\t\t\"Description\":\"Traditional soup prepared with our homemade chicken stock, fine Julien cut chicken, egg and sweet corn\",\n" +
+                    "\t\t\t\t\t\"ImageURL\": \"Chicken-Corn-Soup.jpg\",\n" +
+                    "\t\t\t\t\t\"TotalPrice\": 216.0,\n" +
+                    "\t\t\t\t\t\"AvailabilityStatusId\": 1,\n" +
+                    "\t\t\t\t\t\"Variants\":[]\n" +
+                    "\t\t\t\t},\n" +
+                    "\t\t\t\t{\n" +
+                    "\t\t\t\t\t\"DishId\": \"2b67c47f-e4c1-490e-9386-efffaaeb2b70\",\n" +
+                    "\t\t\t\t\t\"DishName\": \"Hot & Sour Soup\",\n" +
+                    "\t\t\t\t\t\"Description\":\"Soup prepared with Chicken stock, spices, fine Julien cut chicken & Vegetables\",\n" +
+                    "\t\t\t\t\t\"ImageURL\": \"Hot-&-Sour-Soup.jpg\",\n" +
+                    "\t\t\t\t\t\"TotalPrice\": 216.0,\n" +
+                    "\t\t\t\t\t\"AvailabilityStatusId\": 1,\n" +
+                    "\t\t\t\t\t\"Variants\":[]\n" +
+                    "\t\t\t\t},\n" +
+                    "\t\t\t\t{\n" +
+                    "\t\t\t\t\t\"DishId\": \"c4539d0f-8839-4696-833c-a67c1f05132c\",\n" +
+                    "\t\t\t\t\t\"DishName\": \"Hot Szechuan Soup\",\n" +
+                    "\t\t\t\t\t\"Description\":\"A hearty soup from Szechuan region of western China\",\n" +
+                    "\t\t\t\t\t\"ImageURL\": \"Hot-Szechuan-Soup.jpg\",\n" +
+                    "\t\t\t\t\t\"TotalPrice\": 216.0,\n" +
+                    "\t\t\t\t\t\"AvailabilityStatusId\": 1,\n" +
+                    "\t\t\t\t\t\"Variants\":[]\n" +
+                    "\t\t\t\t},\n" +
+                    "\t\t\t\t{\n" +
+                    "\t\t\t\t\t\"DishId\": \"75a29f01-560b-4af8-adc2-f9e54c9abbb0\",\n" +
+                    "\t\t\t\t\t\"DishName\": \"Cream of Mushroom\",\n" +
+                    "\t\t\t\t\t\"Description\":\"A thick creamy soup, a delight for people who prefer thick soups with crusty bread\",\n" +
+                    "\t\t\t\t\t\"ImageURL\": \"Cream-of-Mushroom.jpg\",\n" +
+                    "\t\t\t\t\t\"TotalPrice\": 232.0,\n" +
+                    "\t\t\t\t\t\"AvailabilityStatusId\": 1,\n" +
+                    "\t\t\t\t\t\"Variants\":[]\n" +
+                    "\t\t\t\t},\n" +
+                    "\t\t\t\t{\n" +
+                    "\t\t\t\t\t\"DishId\": \"7126279d-bb1f-4903-b7db-c6417c73c44f\",\n" +
+                    "\t\t\t\t\t\"DishName\": \"RT Special Soup\",\n" +
+                    "\t\t\t\t\t\"Description\":\"Delicious thick soup with chicken, fish, mushrooms and blend of Vegetables\",\n" +
+                    "\t\t\t\t\t\"ImageURL\": \"RT-Special-Soup.jpg\",\n" +
+                    "\t\t\t\t\t\"TotalPrice\": 216.0,\n" +
+                    "\t\t\t\t\t\"AvailabilityStatusId\": 1,\n" +
+                    "\t\t\t\t\t\"Variants\":[]\n" +
+                    "\t\t\t\t},\n" +
+                    "\t\t\t\t\t\n" +
+                    "\t\t\t]\n" +
+                    "\t\t},\n" +
+                    "\n" +
+                    "\t\t\n" +
+                    "\t]\n" +
+                    "}");
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
 
     static {
         try {
@@ -276,7 +383,7 @@ public class Constant {
                     "\t\t\t\t\t\"DishId\": \"095859a7-99bb-4a28-a80d-b2d76d403ec7\",\n" +
                     "\t\t\t\t\t\"DishName\": \"Fish Tikka (8 Pieces)\",\n" +
                     "\t\t\t\t\t\"Description\":\"Fish cubes marinated in yogurt, ginger Garlic paste with mustard oil with our special blend of spices and grilled on charcoal to perfection\",\n" +
-                    "\t\t\t\t\t\"ImageURL\": \"Fish-Tikka-(8 Pieces).jpg\",\n" +
+                    "\t\t\t\t\t\"ImageURL\": \"Fish-Tikka.jpg\",\n" +
                     "\t\t\t\t\t\"TotalPrice\": 632.0,\n" +
                     "\t\t\t\t\t\"AvailabilityStatusId\": 1,\n" +
                     "\t\t\t\t\t\"Variants\":[]\n" +
@@ -754,7 +861,7 @@ public class Constant {
                     "\t\t\t        \"DishId\": \"bdb91165-1abd-4a2e-8f68-05a99fba5911\",\n" +
                     "\t\t\t\t\t\"DishName\": \"Peri Peri Chicken Burger\",\n" +
                     "\t\t\t\t\t\"Description\":\"Our famous Peri Peri sauce will make this burger your favorite. It comes with a grilled chicken beast topped with Portuguese spices and seasoned with Peri Peri sauce and cheese.\",\n" +
-                    "\t\t\t\t\t\"ImageURL\": \"peri-peri-chicken-burger\",\n" +
+                    "\t\t\t\t\t\"ImageURL\": \"peri-peri-chicken-burger.jpg\",\n" +
                     "\t\t\t\t\t\"TotalPrice\": 435.0,\n" +
                     "\t\t\t\t\t\"AvailabilityStatusId\": 1,\n" +
                     "\t\t\t\t\t\"Variants\":[]\n" +
@@ -763,7 +870,7 @@ public class Constant {
                     "           \t        \"DishId\": \"bb0b1312-ee6c-41a2-8d0a-518e80e7c532\",\n" +
                     "\t\t\t\t\t\"DishName\": \"Jalapeno Grilled Chicken Burger\",\n" +
                     "\t\t\t\t\t\"Description\":\"This famouse burger is cooked to perfection. With grilled chicken served over lettuce tomatoes and jalapeno spread with chipotle sauce and melted cheese so you can savor every bite.\",\n" +
-                    "\t\t\t\t\t\"ImageURL\": \"burgers\",\n" +
+                    "\t\t\t\t\t\"ImageURL\": \"burgers.jpg\",\n" +
                     "\t\t\t\t\t\"TotalPrice\": 435.0,\n" +
                     "\t\t\t\t\t\"AvailabilityStatusId\": 1,\n" +
                     "\t\t\t\t\t\"Variants\":[]\n" +
@@ -772,7 +879,7 @@ public class Constant {
                     "    \t            \"DishId\": \"8fc88782-fbd2-4a2b-91ab-b03a5130ab72\",\n" +
                     "\t\t\t\t\t\"DishName\": \"Zinger Burger\",\n" +
                     "\t\t\t\t\t\"Description\":\"If you like it hot and spicy be sure to try our Zinger Burger. Made with a crispy chicken layered with lettuce and tomatoes dripped with melted cheddar cheese and Caesar sauce.\",\n" +
-                    "\t\t\t\t\t\"ImageURL\": \"Zinger-burger\",\n" +
+                    "\t\t\t\t\t\"ImageURL\": \"Zinger-burger.jpg\",\n" +
                     "\t\t\t\t\t\"TotalPrice\": 355.0,\n" +
                     "\t\t\t\t\t\"AvailabilityStatusId\": 1,\n" +
                     "\t\t\t\t\t\"Variants\":[]\n" +
@@ -781,7 +888,7 @@ public class Constant {
                     "    \t            \"DishId\": \"f4defdca-c788-484a-8acf-f647a753c47c\",\n" +
                     "\t\t\t\t\t\"DishName\": \"Piatto Club House Burger\",\n" +
                     "\t\t\t\t\t\"Description\":\"Our trademark burger with grilled chicken is topped off with a fried egg, lettuce, tomatoes and slice of cheese served with our Piatto sauce.\",\n" +
-                    "\t\t\t\t\t\"ImageURL\": \"piatto-club-house-burger\",\n" +
+                    "\t\t\t\t\t\"ImageURL\": \"piatto-club-house-burger.jpg\",\n" +
                     "\t\t\t\t\t\"TotalPrice\": 395.0,\n" +
                     "\t\t\t\t\t\"AvailabilityStatusId\": 1,\n" +
                     "\t\t\t\t\t\"Variants\":[]\n" +
@@ -790,7 +897,7 @@ public class Constant {
                     "    \t            \"DishId\": \"69ad42e8-cce2-4de9-962a-9dcdd47cecbe\",\n" +
                     "\t\t\t\t\t\"DishName\": \"Piatto Club Sandwich\",\n" +
                     "\t\t\t\t\t\"Description\":\"This favorite Triple Decker Sandwich will definitely fill you up layered with crispy fried chicken, fried egg, lettuce and tomato spread with chipotle mayonnaise.\",\n" +
-                    "\t\t\t\t\t\"ImageURL\": \"piatto-club-sandwich\",\n" +
+                    "\t\t\t\t\t\"ImageURL\": \"piatto-club-sandwich.jpg\",\n" +
                     "\t\t\t\t\t\"TotalPrice\": 395.0,\n" +
                     "\t\t\t\t\t\"AvailabilityStatusId\": 1,\n" +
                     "\t\t\t\t\t\"Variants\":[]\n" +
@@ -799,7 +906,7 @@ public class Constant {
                     "    \t            \"DishId\": \"fcbab19e-1735-45f2-ad11-22cee8f1dfa8\",\n" +
                     "\t\t\t\t\t\"DishName\": \"Chicken Fajita Sandwich\",\n" +
                     "\t\t\t\t\t\"Description\":\"Crispy Fajita chicken served with Chipotle, lettuce, tomato and cheese served with house Piatto sauce.\",\n" +
-                    "\t\t\t\t\t\"ImageURL\": \"chicken-fajita-sandwiches\",\n" +
+                    "\t\t\t\t\t\"ImageURL\": \"chicken-fajita-sandwiches.jpg\",\n" +
                     "\t\t\t\t\t\"TotalPrice\": 395.0,\n" +
                     "\t\t\t\t\t\"AvailabilityStatusId\": 1,\n" +
                     "\t\t\t\t\t\"Variants\":[]\n" +
@@ -808,7 +915,7 @@ public class Constant {
                     "    \t            \"DishId\": \"64bb55a5-90d2-4d74-b601-3a79a893ba3b\",\n" +
                     "\t\t\t\t\t\"DishName\": \"Piatto Twister\",\n" +
                     "\t\t\t\t\t\"Description\":\"Crispy chicken along with cheese, crispy lettuce and chipotle garlic mayo sauce and wrap with our own pita bread, on side fries.\",\n" +
-                    "\t\t\t\t\t\"ImageURL\": \"No image\",\n" +
+                    "\t\t\t\t\t\"ImageURL\": \"Noimage.jpg\",\n" +
                     "\t\t\t\t\t\"TotalPrice\": 295.0,\n" +
                     "\t\t\t\t\t\"AvailabilityStatusId\": 1,\n" +
                     "\t\t\t\t\t\"Variants\":[]\n" +
@@ -824,7 +931,7 @@ public class Constant {
                     "                    \"DishId\": \"55e07d7e-6b1a-4cf9-abe9-ff177c94fe82\",\n" +
                     "\t\t\t\t\t\"DishName\": \"SALADS\",\n" +
                     "\t\t\t\t\t\"Description\":\"Our range of salad comes in a variety of taste and ingredients to match any craving\",\n" +
-                    "\t\t\t\t\t\"ImageURL\": \"special-salad-02\",\n" +
+                    "\t\t\t\t\t\"ImageURL\": \"special-salad-02.jpg\",\n" +
                     "\t\t\t\t\t\"TotalPrice\": 455.0,\n" +
                     "\t\t\t\t\t\"AvailabilityStatusId\": 1,\n" +
                     "\t\t\t\t\t\"Variants\":[]\n" +
@@ -839,7 +946,7 @@ public class Constant {
                     "                    \"DishId\": \"60fe4d45-9a6b-4ab6-a1df-931806bf9311\",\n" +
                     "\t\t\t\t\t\"DishName\": \"Piatto Crispy Fried Broast\",\n" +
                     "\t\t\t\t\t\"Description\":\"Our signature broast marinated with spices, coated with seasoned flour and cooked to a beautiful golden crisp. Served with dinner role and signature sauce\",\n" +
-                    "\t\t\t\t\t\"ImageURL\": \"piatto-crispy-braost\",\n" +
+                    "\t\t\t\t\t\"ImageURL\": \"piatto-crispy-braost.jpg\",\n" +
                     "\t\t\t\t\t\"TotalPrice\": 295.0,\n" +
                     "\t\t\t\t\t\"AvailabilityStatusId\": 1,\n" +
                     "\t\t\t\t\t\"Variants\":[]\n" +
@@ -848,7 +955,7 @@ public class Constant {
                     "    \t            \"DishId\": \"7f577a32-ada0-4a0e-afdb-2073be99bb96\",\n" +
                     "\t\t\t\t\t\"DishName\": \"Arabic Roasted Chicken\",\n" +
                     "\t\t\t\t\t\"Description\":\"This scrumptious roasted chicken dish seasoned with exotic Arabian spices is served with Moroccan sauce on the side.\",\n" +
-                    "\t\t\t\t\t\"ImageURL\": \"arabian-chicken\",\n" +
+                    "\t\t\t\t\t\"ImageURL\": \"arabian-chicken.jpg\",\n" +
                     "\t\t\t\t\t\"TotalPrice\": 295.0,\n" +
                     "\t\t\t\t\t\"AvailabilityStatusId\": 1,\n" +
                     "\t\t\t\t\t\"Variants\":[]\n" +
@@ -857,7 +964,7 @@ public class Constant {
                     "    \t            \"DishId\": \"0727e408-5a6a-4693-866b-8173070098fc\",\n" +
                     "\t\t\t\t\t\"DishName\": \"Peri Peri Chicken\",\n" +
                     "\t\t\t\t\t\"Description\":\"Our delicious grilled chicken moistened with Peri Peri sauce to give your taste buds that extra kick. Served with signature sauce.*make it a meaby adding a slideline and drink for Rs. 150\",\n" +
-                    "\t\t\t\t\t\"ImageURL\": \"peri-peri-chicken\",\n" +
+                    "\t\t\t\t\t\"ImageURL\": \"peri-peri-chicken.jpg\",\n" +
                     "\t\t\t\t\t\"TotalPrice\": 295.0,\n" +
                     "\t\t\t\t\t\"AvailabilityStatusId\": 1,\n" +
                     "\t\t\t\t\t\"Variants\":[]\n" +
@@ -873,7 +980,7 @@ public class Constant {
                     "                    \"DishId\": \"3e06b5ff-77e3-49e0-a6ee-26c8257f49b1\",\n" +
                     "\t\t\t\t\t\"DishName\": \"Chicken steak with mushroom sauce\",\n" +
                     "\t\t\t\t\t\"Description\":\"Grilled chicken steak with mushroom sauce served with Mexican rice and fries.\",\n" +
-                    "\t\t\t\t\t\"ImageURL\": \"No image\",\n" +
+                    "\t\t\t\t\t\"ImageURL\": \"Noimage.jpg\",\n" +
                     "\t\t\t\t\t\"TotalPrice\": 535.0,\n" +
                     "\t\t\t\t\t\"AvailabilityStatusId\": 1,\n" +
                     "\t\t\t\t\t\"Variants\":[]\n" +
@@ -882,7 +989,7 @@ public class Constant {
                     "    \t            \"DishId\": \"358d61b8-0054-429d-90db-ae7d1b891f4c\",\n" +
                     "\t\t\t\t\t\"DishName\": \"Chicken Steak with pepper sauce\",\n" +
                     "\t\t\t\t\t\"Description\":\"Grilled chicken steak topped with pepper sauce bed on grilled vegetable served with rice and fries.\",\n" +
-                    "\t\t\t\t\t\"ImageURL\": \"no image\",\n" +
+                    "\t\t\t\t\t\"ImageURL\": \"noimage.jpg\",\n" +
                     "\t\t\t\t\t\"TotalPrice\": 535.0,\n" +
                     "\t\t\t\t\t\"AvailabilityStatusId\": 1,\n" +
                     "\t\t\t\t\t\"Variants\":[]\n" +
@@ -891,7 +998,7 @@ public class Constant {
                     "    \t            \"DishId\": \"d3b6ae42-9210-4411-8132-209449e082e9\",\n" +
                     "\t\t\t\t\t\"DishName\": \"Chicken Tarragon\",\n" +
                     "\t\t\t\t\t\"Description\":\"2 Pieces of delicious boneless grilled chicken breast marinated in special cream tarragon sauce, served with garlic bread, fries and veggies.\",\n" +
-                    "\t\t\t\t\t\"ImageURL\": \"no image\",\n" +
+                    "\t\t\t\t\t\"ImageURL\": \"noimage.jpg\",\n" +
                     "\t\t\t\t\t\"TotalPrice\": 535.0,\n" +
                     "\t\t\t\t\t\"AvailabilityStatusId\": 1,\n" +
                     "\t\t\t\t\t\"Variants\":[]\n" +
@@ -900,7 +1007,7 @@ public class Constant {
                     "    \t            \"DishId\": \"2a1bb659-e3ab-4ad8-b88b-8112f2c58461\",\n" +
                     "\t\t\t\t\t\"DishName\": \"Chicken Moroccan\",\n" +
                     "\t\t\t\t\t\"Description\":\"2 Pieces of delicious boneless grilled chicken marinated in special Moroccan red sauce, served with fries or Mexican rice and veggies.\",\n" +
-                    "\t\t\t\t\t\"ImageURL\": \"no image\",\n" +
+                    "\t\t\t\t\t\"ImageURL\": \"noimage.jpg\",\n" +
                     "\t\t\t\t\t\"TotalPrice\": 535.0,\n" +
                     "\t\t\t\t\t\"AvailabilityStatusId\": 1,\n" +
                     "\t\t\t\t\t\"Variants\":[]\n" +
@@ -909,7 +1016,7 @@ public class Constant {
                     "    \t            \"DishId\": \"d05aea1a-a221-4339-810f-cf4ab53536c6\",\n" +
                     "\t\t\t\t\t\"DishName\": \"Chicken Fajita\",\n" +
                     "\t\t\t\t\t\"Description\":\"(Served on a sizzler with rice & tortillas)\",\n" +
-                    "\t\t\t\t\t\"ImageURL\": \"no image\",\n" +
+                    "\t\t\t\t\t\"ImageURL\": \"noimage.jpg\",\n" +
                     "\t\t\t\t\t\"TotalPrice\": 535.0,\n" +
                     "\t\t\t\t\t\"AvailabilityStatusId\": 1,\n" +
                     "\t\t\t\t\t\"Variants\":[]\n" +
@@ -918,7 +1025,7 @@ public class Constant {
                     "    \t            \"DishId\": \"5fc0f8d9-3e4f-44f5-a8dc-c633a387b93e\",\n" +
                     "\t\t\t\t\t\"DishName\": \"Stuffed Chicken Alaska\",\n" +
                     "\t\t\t\t\t\"Description\":\"Chicken breast stuffed with mushroom, tomato, olives and cheese, serves over Alaska cream sauce on side with fries and rice.\",\n" +
-                    "\t\t\t\t\t\"ImageURL\": \"no image\",\n" +
+                    "\t\t\t\t\t\"ImageURL\": \"noimage.jpg\",\n" +
                     "\t\t\t\t\t\"TotalPrice\": 535.0,\n" +
                     "\t\t\t\t\t\"AvailabilityStatusId\": 1,\n" +
                     "\t\t\t\t\t\"Variants\":[]\n" +
